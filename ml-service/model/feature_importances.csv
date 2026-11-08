@@ -1,0 +1,46 @@
+feature,mean_abs_shap
+annual_income,0.81389594
+age_of_driver,0.27615815
+vehicle_price,0.12354321
+injury_claim,0.11674037
+total_claim,0.09425891
+safety_rating,0.092478156
+annual premium,0.061977487
+police_report,0.050238553
+gender_F,0.048378967
+address_change,0.040499374
+high_education,0.04043354
+age_of_vehicle,0.039609484
+vehicle_color_other,0.037884574
+vehicle_category_Medium,0.029288368
+past_num_of_claims,0.02588911
+policy deductible,0.023871848
+marital_status_0,0.020627929
+vehicle_color_white,0.020190904
+claim_day_of_week_Saturday,0.018983668
+property_status_Own,0.018185928
+witness_present,0.016774787
+vehicle_category_Compact,0.015226356
+vehicle_color_black,0.013903459
+vehicle_category_Large,0.013037586
+accident_site_Highway,0.012919607
+claim_day_of_week_Wednesday,0.01271129
+channel_Phone,0.012608513
+accident_site_Local,0.01224138
+claim_day_of_week_Sunday,0.011867398
+claim_day_of_week_Friday,0.011723298
+claim_day_of_week_Thursday,0.01114482
+channel_Online,0.010640202
+vehicle_color_gray,0.010216485
+vehicle_color_blue,0.00978385
+claim_day_of_week_Tuesday,0.009439413
+accident_site_Parking Lot,0.009104516
+marital_status_1,0.0089950375
+vehicle_color_red,0.0070852363
+claim_day_of_week_Monday,0.006733451
+vehicle_color_silver,0.0066896863
+channel_Broker,0.0064089084
+gender_M,0.0
+claim_day_of_week_Unknown,0.0
+property_status_Rent,0.0
+marital_status_Unknown,0.0

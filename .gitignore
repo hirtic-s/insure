@@ -1,0 +1,22 @@
+# OS
+.DS_Store
+
+# IDE
+.idea/
+.vscode/
+*.iml
+
+# Claude Code local settings
+.claude/settings.local.json
+
+# Python
+venv/
+.venv/
+__pycache__/
+*.pyc
+
+# Java / Maven
+target/
+
+# Spreadsheet export
+*.numbers
