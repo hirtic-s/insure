@@ -24,6 +24,9 @@ public class ClaimRiskScore {
 
     private Instant scoredAt = Instant.now();
 
+    /** Milliseconds from claim submission to score persisted. */
+    private Long scoringLatencyMs;
+
     public ClaimRiskScore() {
     }
 
@@ -64,6 +67,14 @@ public class ClaimRiskScore {
 
     public void setScoredAt(Instant scoredAt) {
         this.scoredAt = scoredAt;
+    }
+
+    public Long getScoringLatencyMs() {
+        return scoringLatencyMs;
+    }
+
+    public void setScoringLatencyMs(Long scoringLatencyMs) {
+        this.scoringLatencyMs = scoringLatencyMs;
     }
 
 

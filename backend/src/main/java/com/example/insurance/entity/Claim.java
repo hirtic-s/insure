@@ -58,12 +58,15 @@ public class Claim {
 
     private BigDecimal injuryClaim;
 
+    /** Set when the claim arrived through a file upload. */
+    private UUID batchId;
+
     @Enumerated(EnumType.STRING)
     @Column(nullable=false)
     private ClaimStatus status = ClaimStatus.SUBMITTED;
 
     public enum ClaimStatus{
-        SUBMITTED, SCORED, UNDER_REVIEW, APPROVED, ESCALATED, DENIED
+        SUBMITTED, SCORED, UNSCORED, UNDER_REVIEW, APPROVED, ESCALATED, DENIED
     }
 
     public Claim() {
@@ -139,6 +142,14 @@ public class Claim {
 
     public void setDocumentS3Key(String documentS3Key) {
         this.documentS3Key = documentS3Key;
+    }
+
+    public UUID getBatchId() {
+        return batchId;
+    }
+
+    public void setBatchId(UUID batchId) {
+        this.batchId = batchId;
     }
 
     public ClaimStatus getStatus() {

@@ -28,3 +28,8 @@ spring:
       value-deserializer: org.springframework.kafka.support.serializer.JsonDeserializer
       properties:
         spring.json.trusted.packages: "*"
+
+  servlet:
+    multipart:
+      max-file-size: 25MB
+      max-request-size: 25MB

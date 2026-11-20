@@ -1,6 +1,5 @@
 package com.example.insurance.service;
 
-import com.example.insurance.dto.ClaimSubmittedEvent;
 import com.example.insurance.entity.Claim;
 import com.example.insurance.repository.ClaimRepository;
 import org.slf4j.Logger;
@@ -15,6 +14,7 @@ import java.time.ZoneOffset;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
+import java.util.UUID;
 
 @Service
 public class FraudScoringLogic {
@@ -47,14 +47,12 @@ public class FraudScoringLogic {
         this.claimRepository = claimRepository;
     }
 
-    public ScoringResult computeScore(ClaimSubmittedEvent event) {
-        // The event is a thin notification — look up the full Claim entity
-        // to access fields added in the last round (driverAge, gender, etc.)
-        // that aren't on ClaimSubmittedEvent yet.
-        Claim claim = claimRepository.findById(event.getClaimId()).orElse(null);
+    public ScoringResult computeScore(UUID claimId) {
+        // The event is a thin notification — look up the full Claim entity.
+        Claim claim = claimRepository.findById(claimId).orElse(null);
         if (claim == null) {
-            log.warn("Claim {} not found in DB, returning default score", event.getClaimId());
-            return new ScoringResult(0.0, List.of("Unable to score: claim not found"));
+            log.warn("Claim {} not found in DB, cannot score", claimId);
+            return ScoringResult.unscored("Unable to score: claim not found");
         }
 
         Map<String, Object> payload = buildPayload(claim);
@@ -69,7 +67,7 @@ public class FraudScoringLogic {
 
             if (response == null) {
                 log.warn("ML service returned null response for claim {}", claim.getId());
-                return new ScoringResult(0.0, List.of("Unable to score: empty response"));
+                return ScoringResult.unscored("Unable to score: empty response");
             }
 
             double riskScore = ((Number) response.get("risk_score")).doubleValue();
@@ -77,12 +75,12 @@ public class FraudScoringLogic {
             @SuppressWarnings("unchecked")
             List<String> topFactors = (List<String>) response.get("top_factors");
 
-            return new ScoringResult(riskScore, topFactors);
+            return new ScoringResult(riskScore, topFactors, true);
 
         } catch (Exception e) {
             // ML service outage must NOT crash claim submission
             log.error("ML service call failed for claim {}: {}", claim.getId(), e.getMessage());
-            return new ScoringResult(0.0, List.of("Unable to score: ML service unavailable"));
+            return ScoringResult.unscored("Unable to score: ML service unavailable");
         }
     }
 
