@@ -13,8 +13,8 @@ the service re-embeds it automatically when the files change.
 cd rag-service
 python3 -m venv venv && source venv/bin/activate
 pip install -r requirements.txt
-export GEMINI_API_KEY=...        # free key from https://aistudio.google.com/apikey
-uvicorn app:app --port 8001
+# put GEMINI_API_KEY=... (free key: https://aistudio.google.com/apikey) in rag-service/.env, which git ignores
+uvicorn app:app --port 8001 --env-file .env
 ```
 
 Needs Postgres with the pgvector extension (`pgvector/pgvector:pg17` in the compose files).
