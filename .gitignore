@@ -20,3 +20,6 @@ target/
 
 # Spreadsheet export
 *.numbers
+
+# Deployment secrets
+.env

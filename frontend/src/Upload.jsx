@@ -1,5 +1,6 @@
 import { useCallback, useEffect, useRef, useState } from "react";
-import { getBatch, uploadBatch } from "./api.js";
+import { getBatch, submitManual, uploadBatch } from "./api.js";
+import ManualEntry from "./ManualEntry.jsx";
 import { AlertIcon, CheckIcon, FileIcon, UploadIcon } from "./icons.jsx";
 import { duration } from "./format.js";
 
@@ -10,6 +11,8 @@ function useBatchProgress(batchId, onTick) {
   const [batch, setBatch] = useState(null);
   const [rate, setRate] = useState(null);
   const samples = useRef([]);
+  const tickRef = useRef(onTick);
+  tickRef.current = onTick;
 
   useEffect(() => {
     if (!batchId) return;
@@ -30,7 +33,7 @@ function useBatchProgress(batchId, onTick) {
         if (samples.current.length > 1 && now > first.t) {
           setRate(((done - first.done) / (now - first.t)) * 1000);
         }
-        onTick?.();
+        tickRef.current?.();
         if (done < b.accepted) timer = setTimeout(tick, 1000);
       } catch {
         if (!stopped) timer = setTimeout(tick, 3000);
@@ -65,14 +68,14 @@ function Dropzone({ onFile, error, compact }) {
         <p className="dz-title">{compact ? "Add another claims file" : "Drop a claims CSV to score it"}</p>
         {!compact && (
           <p className="dz-hint">
-            Each row becomes a claim and is scored in the background. Needs columns{" "}
-            <code>age_of_driver</code>, <code>gender</code>, <code>accident_site</code>, <code>claim_date</code>, <code>total_claim</code>.
+            Each row becomes a claim and is scored in the background. The file needs the 28 model columns
+            (for example <code>Fault</code>, <code>PolicyType</code>, <code>BasePolicy</code>, <code>Age</code>); the sample shows all of them.
           </p>
         )}
       </div>
       <div className="dz-actions">
         <button type="button" className="btn primary" onClick={() => input.current.click()}>Choose file</button>
-        {!compact && <a className="btn ghost" href="/sample-claims.csv" download>Download 200-claim sample</a>}
+        {!compact && <a className="btn ghost" href="/sample-claims.csv" download>Download 300-claim sample</a>}
       </div>
       {error && (
         <p className="dz-error" role="alert"><AlertIcon /> {error}</p>
@@ -125,30 +128,39 @@ function Progress({ batch, rate, onReset }) {
   );
 }
 
-export default function Upload({ onActivity }) {
+const connectError = (e) =>
+  e.message === "Failed to fetch" ? "Can't reach the claims service. Check that the backend is running." : e.message;
+
+export default function Intake({ onActivity, onBatch }) {
+  const [mode, setMode] = useState("file");
   const [batchId, setBatchId] = useState(null);
-  const [uploading, setUploading] = useState(false);
+  const [busy, setBusy] = useState(false);
   const [error, setError] = useState(null);
   const { batch, rate } = useBatchProgress(batchId, onActivity);
 
-  const handleFile = useCallback(async (file) => {
+  const start = useCallback(async (request) => {
     setError(null);
-    if (!/\.csv$/i.test(file.name)) return setError("That isn't a .csv file. Export your claims as CSV and try again.");
-    if (file.size > MAX_BYTES) return setError("That file is over 25 MB. Split it into smaller files.");
-    setUploading(true);
+    setBusy(true);
     try {
-      const b = await uploadBatch(file);
+      const b = await request();
       setBatchId(b.id);
+      onBatch?.(b.id);
       onActivity?.();
     } catch (e) {
-      setError(e.message === "Failed to fetch" ? "Can't reach the claims service. Check that the backend is running." : e.message);
+      setError(connectError(e));
     } finally {
-      setUploading(false);
+      setBusy(false);
     }
-  }, [onActivity]);
+  }, [onActivity, onBatch]);
 
-  if (uploading) {
-    return <div className="progress" role="status"><div className="pg-head"><FileIcon className="pg-file" /><strong>Uploading…</strong></div><div className="bar indeterminate" aria-hidden="true"><i /></div></div>;
+  const handleFile = useCallback((file) => {
+    if (!/\.csv$/i.test(file.name)) return setError("That isn't a .csv file. Export your claims as CSV and try again.");
+    if (file.size > MAX_BYTES) return setError("That file is over 25 MB. Split it into smaller files.");
+    start(() => uploadBatch(file));
+  }, [start]);
+
+  if (busy && mode === "file") {
+    return <div className="progress" role="status"><div className="pg-head"><FileIcon className="pg-file" /><strong>Sending…</strong></div><div className="bar indeterminate" aria-hidden="true"><i /></div></div>;
   }
   if (batchId && batch) {
     return <Progress batch={batch} rate={rate} onReset={() => setBatchId(null)} />;
@@ -156,5 +168,17 @@ export default function Upload({ onActivity }) {
   if (batchId) {
     return <div className="progress" role="status"><div className="pg-head"><FileIcon className="pg-file" /><strong>Queued…</strong></div><div className="bar indeterminate" aria-hidden="true"><i /></div></div>;
   }
-  return <Dropzone onFile={handleFile} error={error} compact={false} />;
+  return (
+    <section className="intake" aria-label="Add claims">
+      <div className="tabs" role="tablist">
+        {[["file", "Upload a file"], ["manual", "Enter manually"]].map(([id, label]) => (
+          <button key={id} type="button" role="tab" aria-selected={mode === id} className={mode === id ? "on" : ""}
+            onClick={() => { setMode(id); setError(null); }}>{label}</button>
+        ))}
+      </div>
+      {mode === "file"
+        ? <Dropzone onFile={handleFile} error={error} compact={false} />
+        : <ManualEntry onSubmit={(claims) => start(() => submitManual(claims))} error={error} busy={busy} />}
+    </section>
+  );
 }

@@ -1,110 +1,53 @@
 # InSure! ML Fraud Scoring Service
 
-XGBoost-based fraud detection model exposed as a FastAPI microservice.
-Returns a risk score (0-1) and human-readable SHAP explanations for each claim.
+XGBoost fraud-risk model served by FastAPI. For each claim it returns a fraud
+probability, a risk band (HIGH / MEDIUM / LOW) and the top SHAP factors in plain English.
 
-## Setup
+Trained on `data/fraud_oracle.csv` (Kaggle "Vehicle Insurance Fraud Detection": 15,420 claims, about 6% fraud).
+
+## Setup, train, run
 
 ```bash
 cd ml-service
-python3 -m venv venv
-source venv/bin/activate
-pip install fastapi uvicorn xgboost scikit-learn pandas numpy shap joblib
+python3 -m venv venv && source venv/bin/activate
+pip install -r requirements.txt
+python train_model.py          # writes model/*.joblib and column_metadata.json
+uvicorn app:app --port 8000
 ```
 
-## Train the model
+`GET /schema` lists the 28 input columns and their allowed values. `POST /score` takes a flat
+JSON object with those columns and returns `risk_score`, `risk_band` and `top_factors`.
 
-```bash
-python train_model.py
-```
+## How good is it
 
-This reads `data/insurance_fraud_data.csv`, trains an XGBoost classifier, and
-saves artefacts (model, encoder, SHAP explainer, column metadata) to `model/`.
+Five-fold cross-validated, out-of-fold predictions (`model/column_metadata.json` holds the numbers):
 
-## Start the service
-
-```bash
-uvicorn app:app --reload --port 8000
-```
-
-## Score a claim
-
-```bash
-curl -X POST http://localhost:8000/score \
-  -H "Content-Type: application/json" \
-  -d '{
-    "age_of_driver": 35,
-    "gender": "M",
-    "marital_status": "1",
-    "safety_rating": 60,
-    "annual_income": 45000,
-    "high_education": 1,
-    "address_change": 0,
-    "property_status": "Own",
-    "claim_day_of_week": "Monday",
-    "accident_site": "Highway",
-    "past_num_of_claims": 2,
-    "witness_present": 0,
-    "channel": "Online",
-    "police_report": 0,
-    "age_of_vehicle": 5,
-    "vehicle_category": "Medium",
-    "vehicle_price": 20000,
-    "vehicle_color": "black",
-    "total_claim": 30000,
-    "injury_claim": 5000,
-    "policy deductible": 500,
-    "annual premium": 1200
-  }'
-```
-
-Response:
-
-```json
-{
-  "risk_score": 0.2356,
-  "top_factors": [
-    "Claimant annual income (decreases risk)",
-    "Driver age (decreases risk)",
-    "Injury claim amount (decreases risk)",
-    "Vehicle price (decreases risk)",
-    "Education level indicator (increases risk)"
-  ]
-}
-```
-
-## Health check
-
-```
-GET http://localhost:8000/health
-```
-
-## Data Leakage Note
-
-**What is data leakage?** It occurs when a model is trained on features that
-would not be available at prediction time in production. The model learns
-patterns that can't be reproduced when scoring real claims, giving
-artificially inflated (or misleading) metrics during evaluation.
-
-**Features removed:**
-
-| Feature | Why it leaks |
+| Metric | Value |
 |---|---|
-| `days open` | Only known after a claim has been open for some time -- doesn't exist at the moment a new claim is submitted for scoring. |
-| `form defects` | Counted during manual review of the submitted paperwork, not available at filing time. |
-| `liab_prct` | Liability percentage is determined by a claims adjuster during investigation, not reported by the claimant. |
+| ROC-AUC | 0.829 |
+| PR-AUC (random = 0.060) | 0.232 |
+| Fraud found in top 10% of claims by score | 36% (precision 21%) |
+| Fraud found in top 30% of claims by score | 76% |
 
-**Impact on metrics:**
+This ranks claims for review; it does not decide them. Most High-band claims are still legitimate.
+Bands come from the score distribution: High is the top 10% of claims (score of about 16% or more),
+Medium the next 20% (about 8% or more). Scores are close to real probabilities because training does
+not reweight classes, against a base rate of about 6%.
 
-| Metric | Before (with leakage) | After (clean) |
+## Data decisions
+
+| Column | Decision | Why |
 |---|---|---|
-| ROC-AUC | 0.6305 | 0.6357 |
-| Fraud precision | 0.32 | 0.34 |
-| Fraud recall | 0.44 | 0.47 |
-| Fraud F1 | 0.37 | 0.39 |
+| `PolicyNumber`, `RepNumber` | dropped | Row identifiers; they encode file position, not the claim. |
+| `Year` | dropped | Only 1994-1996, a dataset artefact. Keeping it inflates CV AUC to about 0.85 with no real signal. |
+| `NumberOfSuppliments` | dropped | Added after a claim is filed, so unavailable at scoring time. Dropping it did not change AUC. |
+| `Fault` | kept | Known at filing and the strongest signal (7.9% fraud when the policyholder is at fault, 0.9% for a third party). Without it AUC falls to about 0.73. If your process only decides fault during investigation, drop it and expect the lower number. |
 
-In this case, performance actually improved slightly after removing the leaked
-features. The leaked features were post-hoc signals that added noise rather
-than clean predictive signal. This won't always happen -- in many real-world
-cases, removing leakage *does* reduce apparent performance, which is correct
-because the original metrics were artificially inflated.
+Other caveats: the label column is only 925 fraud cases; `Age` is 0 for about 300 rows (a missing-value
+placeholder in the source); and scoring rows that were in the training data gives optimistic results, so
+evaluate on held-out or out-of-fold predictions only.
+
+## Earlier dataset
+
+The first version trained on a 12K-claim file that, tested the same way, topped out at ROC-AUC about 0.65 even
+with more tuning and with its leakage columns added back, so the labels carried little signal.

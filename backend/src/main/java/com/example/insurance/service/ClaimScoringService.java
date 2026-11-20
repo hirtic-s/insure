@@ -63,6 +63,7 @@ public class ClaimScoringService {
                 .orElseGet(ClaimRiskScore::new);
         riskScore.setClaimId(claimId);
         riskScore.setRiskScore(result.score());
+        riskScore.setRiskBand(result.band());
         riskScore.setTopFactors(String.join("; ", result.factors()));
         riskScore.setScoredAt(now);
         riskScore.setScoringLatencyMs(Duration.between(claim.getSubmittedAt(), now).toMillis());

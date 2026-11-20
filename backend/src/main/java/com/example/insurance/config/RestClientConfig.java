@@ -24,16 +24,6 @@ public class RestClientConfig {
                 .build();
     }
 
-    // Briefing generation calls an LLM, so it gets a much longer read timeout.
-    @Bean
-    public RestClient ragServiceRestClient(
-            @Value("${rag-service.base-url:http://localhost:8001}") String baseUrl) {
-        return RestClient.builder()
-                .baseUrl(baseUrl)
-                .requestFactory(factory(1000, 45000))
-                .build();
-    }
-
     private static SimpleClientHttpRequestFactory factory(long connectMs, long readMs) {
         SimpleClientHttpRequestFactory f = new SimpleClientHttpRequestFactory();
         f.setConnectTimeout(Duration.ofMillis(connectMs));

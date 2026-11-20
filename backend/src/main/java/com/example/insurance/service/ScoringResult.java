@@ -6,9 +6,9 @@ import java.util.List;
  * Outcome of a scoring attempt. {@code scored} is false when the ML service
  * could not be reached; callers must not persist {@code score} in that case.
  */
-public record ScoringResult(double score, List<String> factors, boolean scored) {
+public record ScoringResult(double score, String band, List<String> factors, boolean scored) {
 
     public static ScoringResult unscored(String reason) {
-        return new ScoringResult(0.0, List.of(reason), false);
+        return new ScoringResult(0.0, null, List.of(reason), false);
     }
 }

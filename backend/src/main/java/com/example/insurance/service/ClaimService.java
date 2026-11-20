@@ -28,20 +28,9 @@ public class ClaimService {
 
         Claim claim = new Claim();
         claim.setPolicyNumber(request.getPolicyNumber());
-        claim.setClaimantName((request.getClaimantName()));
+        claim.setClaimantName(request.getClaimantName());
         claim.setIncidentDescription(request.getIncidentDescription());
-        claim.setClaimAmount(request.getClaimAmount());
-        claim.setPolicyStartDate(request.getPolicyStartDate());
-        claim.setIncidentDate(request.getIncidentDate());
-        claim.setDocumentS3Key(request.getDocumentS3Key());
-        claim.setDriverAge(request.getDriverAge());
-        claim.setGender(request.getGender());
-        claim.setMaritalStatus(request.getMaritalStatus());
-        claim.setAccidentSite(request.getAccidentSite());
-        claim.setWitnessPresent(request.getWitnessPresent());
-        claim.setPoliceReportFiled(request.getPoliceReportFiled());
-        claim.setVehicleColor(request.getVehicleColor());
-        claim.setInjuryClaim(request.getInjuryClaim());
+        claim.setFeatures(ClaimFeatures.normalise(request.getFeatures()));
         claim.setSubmittedAt(Instant.now());
         claim.setStatus(Claim.ClaimStatus.SUBMITTED);
 
@@ -50,9 +39,6 @@ public class ClaimService {
         ClaimSubmittedEvent event = new ClaimSubmittedEvent();
         event.setClaimId(savedClaim.getId());
         event.setPolicyNumber(savedClaim.getPolicyNumber());
-        event.setClaimAmount(savedClaim.getClaimAmount());
-        event.setPolicyStartDate(savedClaim.getPolicyStartDate());
-        event.setIncidentDate(savedClaim.getIncidentDate());
         event.setSubmittedAt(savedClaim.getSubmittedAt());
 
         claimEventProducer.publishClaimSubmitted(event);

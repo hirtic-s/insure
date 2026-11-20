@@ -1,46 +1,142 @@
 feature,mean_abs_shap
-annual_income,0.81389594
-age_of_driver,0.27615815
-vehicle_price,0.12354321
-injury_claim,0.11674037
-total_claim,0.09425891
-safety_rating,0.092478156
-annual premium,0.061977487
-police_report,0.050238553
-gender_F,0.048378967
-address_change,0.040499374
-high_education,0.04043354
-age_of_vehicle,0.039609484
-vehicle_color_other,0.037884574
-vehicle_category_Medium,0.029288368
-past_num_of_claims,0.02588911
-policy deductible,0.023871848
-marital_status_0,0.020627929
-vehicle_color_white,0.020190904
-claim_day_of_week_Saturday,0.018983668
-property_status_Own,0.018185928
-witness_present,0.016774787
-vehicle_category_Compact,0.015226356
-vehicle_color_black,0.013903459
-vehicle_category_Large,0.013037586
-accident_site_Highway,0.012919607
-claim_day_of_week_Wednesday,0.01271129
-channel_Phone,0.012608513
-accident_site_Local,0.01224138
-claim_day_of_week_Sunday,0.011867398
-claim_day_of_week_Friday,0.011723298
-claim_day_of_week_Thursday,0.01114482
-channel_Online,0.010640202
-vehicle_color_gray,0.010216485
-vehicle_color_blue,0.00978385
-claim_day_of_week_Tuesday,0.009439413
-accident_site_Parking Lot,0.009104516
-marital_status_1,0.0089950375
-vehicle_color_red,0.0070852363
-claim_day_of_week_Monday,0.006733451
-vehicle_color_silver,0.0066896863
-channel_Broker,0.0064089084
-gender_M,0.0
-claim_day_of_week_Unknown,0.0
-property_status_Rent,0.0
-marital_status_Unknown,0.0
+Fault_Policy Holder,0.98452836
+BasePolicy_Liability,0.7225918
+AddressChange_Claim_2 to 3 years,0.1668812
+Fault_Third Party,0.13910083
+Age,0.124166094
+PolicyType_Sedan - Collision,0.0859097
+PolicyType_Sedan - Liability,0.08312122
+MonthClaimed_Nov,0.06612538
+PolicyType_Sedan - All Perils,0.059810378
+Deductible,0.05731459
+WeekOfMonthClaimed,0.057118163
+WeekOfMonth,0.052928675
+DriverRating,0.045412086
+Make_Toyota,0.03992906
+VehicleCategory_Sedan,0.034586165
+MonthClaimed_Aug,0.034540605
+Month_Mar,0.03406377
+AgeOfVehicle_6 years,0.033985894
+Make_Accura,0.03335318
+VehicleCategory_Sport,0.033120908
+PastNumberOfClaims_2 to 4,0.032983597
+AgeOfVehicle_7 years,0.03155785
+AccidentArea_Rural,0.031237809
+Make_Pontiac,0.029743506
+VehiclePrice_20000 to 29000,0.029500864
+AgeOfVehicle_more than 7,0.028604876
+DayOfWeekClaimed_Thursday,0.02824632
+Sex_Female,0.02822326
+MaritalStatus_Married,0.028058548
+MonthClaimed_May,0.0275303
+PolicyType_Sport - Collision,0.027233742
+DayOfWeekClaimed_Tuesday,0.027007472
+DayOfWeek_Sunday,0.02692096
+MonthClaimed_Dec,0.026215134
+PastNumberOfClaims_none,0.025680413
+DayOfWeekClaimed_Friday,0.025126852
+AgeOfVehicle_5 years,0.024905767
+DayOfWeek_Monday,0.02419989
+AgeOfPolicyHolder_36 to 40,0.023255195
+Make_VW,0.022393472
+AgeOfPolicyHolder_26 to 30,0.021924177
+Month_Jul,0.021410296
+DayOfWeek_Wednesday,0.018012533
+DayOfWeekClaimed_Monday,0.017710067
+MonthClaimed_Sep,0.016621314
+PoliceReportFiled_No,0.016353503
+VehiclePrice_30000 to 39000,0.016024403
+DayOfWeek_Saturday,0.015299433
+MonthClaimed_Jul,0.015213361
+AddressChange_Claim_no change,0.014798679
+BasePolicy_All Perils,0.01465325
+AgeOfVehicle_4 years,0.014223054
+MaritalStatus_Single,0.013557422
+AgeOfPolicyHolder_31 to 35,0.013292246
+Month_Dec,0.013276465
+AccidentArea_Urban,0.0130744
+Sex_Male,0.012895481
+Make_Honda,0.012873647
+AgentType_External,0.012804802
+VehiclePrice_40000 to 59000,0.012163432
+DayOfWeek_Tuesday,0.011598233
+Month_Nov,0.011349712
+DayOfWeekClaimed_Wednesday,0.011302301
+Make_Chevrolet,0.011021941
+NumberOfCars_3 to 4,0.010916519
+PastNumberOfClaims_1,0.010839655
+BasePolicy_Collision,0.010703459
+AddressChange_Claim_4 to 8 years,0.009956236
+Month_May,0.009766975
+Make_Ford,0.00933181
+Make_Mazda,0.008992994
+MonthClaimed_Jun,0.008772947
+DayOfWeek_Friday,0.0082472395
+MonthClaimed_Apr,0.008178049
+PastNumberOfClaims_more than 4,0.008067021
+AgeOfPolicyHolder_41 to 50,0.008004382
+VehiclePrice_more than 69000,0.0074539003
+Month_Jun,0.007412399
+MonthClaimed_Jan,0.007311408
+AgeOfPolicyHolder_51 to 65,0.007303182
+VehiclePrice_less than 20000,0.0070875315
+DayOfWeek_Thursday,0.0070267003
+Month_Oct,0.0069878516
+Month_Feb,0.0064835916
+MonthClaimed_Feb,0.0063987854
+Month_Apr,0.006211222
+Make_Saab,0.0056274487
+Days_Policy_Accident_more than 30,0.0054277107
+Month_Aug,0.0044288556
+AgeOfVehicle_2 years,0.00416826
+VehicleCategory_Utility,0.004124782
+MonthClaimed_Mar,0.004062827
+PoliceReportFiled_Yes,0.0039734347
+Month_Jan,0.003946874
+NumberOfCars_2 vehicles,0.0034948403
+Month_Sep,0.0034933588
+Days_Policy_Accident_none,0.0033772048
+MonthClaimed_Oct,0.0031601011
+AgeOfVehicle_new,0.003087546
+AddressChange_Claim_1 year,0.0022460253
+NumberOfCars_1 vehicle,0.0021867487
+AgeOfPolicyHolder_21 to 25,0.002086451
+AgentType_Internal,0.001853422
+PolicyType_Utility - All Perils,0.0016749513
+AgeOfPolicyHolder_over 65,0.0014827112
+Days_Policy_Claim_more than 30,0.0010679677
+DayOfWeekClaimed_Saturday,0.00077108276
+Make_Saturn,0.0006322122
+MaritalStatus_Divorced,0.00062017445
+Make_Dodge,0.00032878024
+NumberOfCars_more than 8,0.0
+AddressChange_Claim_under 6 months,0.0
+WitnessPresent_No,0.0
+WitnessPresent_Yes,0.0
+NumberOfCars_5 to 8,0.0
+MonthClaimed_0,0.0
+AgeOfPolicyHolder_18 to 20,0.0
+Make_Mecedes,0.0
+DayOfWeekClaimed_Sunday,0.0
+DayOfWeekClaimed_0,0.0
+Make_Porche,0.0
+MaritalStatus_Widow,0.0
+PolicyType_Sport - All Perils,0.0
+Make_Nisson,0.0
+PolicyType_Sport - Liability,0.0
+PolicyType_Utility - Collision,0.0
+PolicyType_Utility - Liability,0.0
+Make_Mercury,0.0
+Make_Lexus,0.0
+AgeOfPolicyHolder_16 to 17,0.0
+VehiclePrice_60000 to 69000,0.0
+Days_Policy_Accident_1 to 7,0.0
+Days_Policy_Accident_15 to 30,0.0
+Days_Policy_Accident_8 to 15,0.0
+Days_Policy_Claim_8 to 15,0.0
+Days_Policy_Claim_none,0.0
+Make_Jaguar,0.0
+AgeOfVehicle_3 years,0.0
+Make_Ferrari,0.0
+Make_BMW,0.0
+Days_Policy_Claim_15 to 30,0.0

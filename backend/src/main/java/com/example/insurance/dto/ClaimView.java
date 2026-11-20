@@ -2,8 +2,8 @@ package com.example.insurance.dto;
 
 import com.example.insurance.entity.Claim;
 
-import java.math.BigDecimal;
 import java.time.Instant;
+import java.util.Map;
 import java.util.UUID;
 
 /** A claim joined with its fraud score (null until scored). */
@@ -12,18 +12,12 @@ public record ClaimView(
         String policyNumber,
         String claimantName,
         String incidentDescription,
-        BigDecimal claimAmount,
-        Instant incidentDate,
         Instant submittedAt,
         Claim.ClaimStatus status,
-        Integer driverAge,
-        String gender,
-        String maritalStatus,
-        String accidentSite,
-        Boolean witnessPresent,
-        Boolean policeReportFiled,
-        BigDecimal injuryClaim,
+        Map<String, Object> features,
         Double riskScore,
+        String riskBand,
         String topFactors,
-        Long scoringLatencyMs) {
+        Long scoringLatencyMs,
+        UUID batchId) {
 }

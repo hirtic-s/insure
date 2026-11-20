@@ -1,201 +1,301 @@
-age_of_driver,gender,marital_status,safety_rating,annual_income,high_education,address_change,property_status,claim_date,claim_day_of_week,accident_site,past_num_of_claims,witness_present,liab_prct,channel,police_report,age_of_vehicle,vehicle_category,vehicle_price,vehicle_color,total_claim,injury_claim,policy deductible,annual premium,days open,form defects,fraud reported
-39,M,1,73,58612.8,1,0,Own,8/12/2023,Saturday,Highway,0,0,25,Phone,0,8,Large,24360.59273,silver,26633.27819,5196.552552,1000,1406.91,8.641800488,5,0
-33,M,1,72,35936,0,1,Own,10/18/2024,Friday,Local,0,1,45,Phone,0,2,Medium,23457.35282,black,26707.46021,7957.267641,2000,1415.74,10.00976115,5,1
-31,M,1,76,84940.8,1,1,Own,12/23/2023,Saturday,Local,0,0,100,Phone,0,7,Medium,19752.42523,gray,15279.38583,3014.110884,1000,1199.44,8.264031851,3,0
-53,F,1,93,73526.4,0,1,Own,2/25/2024,Sunday,Parking Lot,0,0,100,Phone,0,1,Medium,32910.34224,red,20909.27772,5671.599025,500,708.64,9.235943007,4,0
-41,M,1,87,59403.2,1,0,Own,9/4/2024,Wednesday,Local,0,0,25,Phone,0,6,Medium,28570.37675,red,34493.97997,4064.569489,1000,1187.96,10.25962917,2,0
-42,F,0,68,29779.2,1,0,Own,5/26/2024,Sunday,Local,0,1,84,Phone,1,4,Medium,12689.88429,white,6535.967672,2812.365265,2000,972.18,9.443031698,2,1
-50,M,1,89,62611.2,1,1,Rent,5/23/2024,Thursday,Parking Lot,0,0,10,Phone,0,6,Large,53451.42101,silver,7131.377201,5712.282494,2000,1104.5,8.588020977,3,0
-42,F,1,68,79776,1,0,Own,8/31/2023,Thursday,Parking Lot,1,0,77,Phone,1,2,Large,17740.69947,black,28271.74319,9218.58245,1000,1088.34,10.20650635,2,0
-30,F,1,79,34419,1,1,Own,9/27/2024,Friday,Parking Lot,0,0,61,Phone,0,7,Medium,28091.43192,silver,15488.98712,3973.694785,1000,988.45,7.041739847,3,1
-49,F,0,57,62248,1,0,Own,7/24/2023,Monday,Local,0,0,18,Phone,1,10,Large,23264.32531,blue,33770.80035,4264.395565,2000,1155.55,9.49194457,5,0
-70,M,1,58,67980.8,1,0,Own,11/6/2024,Wednesday,Local,0,0,50,Phone,0,5,Compact,29214.5357,black,19172.68928,2417.922997,500,1451.62,7.454180856,4,0
-28,F,1,49,53307.2,1,1,Rent,6/24/2023,Saturday,Parking Lot,1,0,50,Phone,1,5,Compact,23876.17436,silver,32074.03469,3456.679158,500,1737.66,10.66792937,8,1
-38,M,1,78,58198.4,0,0,Rent,2/26/2024,Monday,Local,0,0,50,Phone,1,3,Large,17991.21351,gray,12246.51763,7204.667355,500,538.17,10.04835868,5,0
-42,F,0,92,39814.4,1,1,Own,9/3/2023,Sunday,Highway,0,0,72,Phone,1,4,Compact,12006.5627,red,12427.00182,3388.568025,2000,1273.7,9.966159716,4,1
-23,M,1,82,20164.8,1,0,Rent,3/21/2024,Thursday,Highway,0,0,80,Phone,1,6,Compact,12224.5503,white,24375.06253,5335.459014,500,1848.81,9.411242095,4,1
-55,M,1,83,14104,0,1,Own,8/31/2024,Saturday,Parking Lot,0,0,69,Phone,0,4,Compact,12845.13183,other,30130.72245,6011.22711,500,1362.87,8.528898183,3,1
-44,F,0,65,160546,1,1,Rent,9/1/2024,Sunday,Local,0,0,86,Phone,1,4,Large,76566.41329,silver,30982.76488,10852.36645,500,1239.22,8.592964817,3,0
-37,F,0,68,7786,0,1,Rent,5/26/2024,Sunday,Highway,0,0,51,Phone,1,5,Large,34708.88292,black,23599.39624,5904.032433,500,1105.49,8.546369217,9,1
-40,F,1,77,99026,1,1,Own,8/6/2023,Sunday,Parking Lot,0,0,50,Phone,1,5,Medium,19450.25858,silver,12600.65557,5891.41743,1000,1425.54,9.551207744,2,0
-35,F,1,63,56881.6,1,1,Own,9/27/2023,Wednesday,Highway,0,0,93,Phone,1,3,Medium,22227.21526,black,18229.27521,5429.714276,1000,1038.09,9.545037903,3,0
-54,F,0,79,63856,1,1,Own,5/27/2024,Monday,Highway,0,0,32,Phone,1,10,Medium,34694.52214,blue,12470.68379,8093.500512,1000,1489.24,8.645313687,2,0
-27,M,0,36,32728,1,0,Rent,12/28/2024,Saturday,Parking Lot,2,0,71,Phone,1,5,Large,7879.238294,black,41443.38211,6794.780109,2000,769.95,9.057925582,2,1
-42,F,1,65,179808,0,1,Rent,10/5/2023,Thursday,Parking Lot,3,0,93,Phone,1,6,Large,34221.32516,silver,21670.54025,4019.553749,2000,1514.72,10.20500492,5,0
-62,M,0,90,66056,1,1,Own,12/22/2024,Sunday,Local,0,0,76,Phone,1,4,Large,16521.38304,white,24548.54157,5001.112247,500,1612.43,9.534852522,2,0
-34,M,1,82,16429,0,1,Own,3/20/2023,Monday,Parking Lot,0,1,0,Phone,1,5,Large,20504.51437,black,44689.78043,3431.849274,2000,1136.83,8.164786494,4,1
-31,F,0,94,84939.2,1,1,Own,3/9/2023,Thursday,Local,1,0,94,Phone,1,4,Medium,21003.68362,gray,22015.10594,5270.906542,2000,1322.78,8.63599319,3,0
-44,M,0,73,60563.2,1,1,Own,12/23/2023,Saturday,Parking Lot,1,1,81,Phone,1,1,Medium,15002.20433,gray,15462.54245,3812.903368,1000,1483.25,8.539403447,2,0
-47,F,1,44,61587.2,1,0,Rent,7/30/2024,Tuesday,Highway,0,0,57,Phone,0,4,Large,14516.1342,white,12701.78418,4627.458464,500,1463.82,7.48828902,7,0
-62,F,0,75,66012.8,0,1,Own,3/1/2023,Wednesday,Local,0,0,28,Phone,1,4,Compact,18719.35593,gray,34051.34729,3011.284525,500,1497.35,9.101195924,5,0
-32,F,0,93,55452.8,1,0,Own,1/23/2023,Monday,Highway,0,0,100,Phone,0,8,Large,15699.24609,other,9448.857968,4130.137132,500,1495.1,7.8403765,3,0
-46,M,0,45,11246,0,1,Own,9/22/2023,Friday,Local,1,1,34,Phone,1,2,Large,25602.20531,other,30860.11818,4499.059204,2000,1338.5,9.64053346,3,1
-57,M,1,65,14693,1,0,Rent,8/9/2024,Friday,Parking Lot,1,0,64,Phone,1,1,Medium,9732.691388,gray,26752.07125,5461.151361,1000,1074.07,9.812436192,3,1
-56,M,1,83,44387,1,1,Rent,10/19/2023,Thursday,Local,0,1,27,Phone,0,3,Medium,10883.7118,red,11807.93998,4511.907191,2000,1103.58,10.5576621,6,1
-51,M,1,65,62905.6,0,1,Rent,7/17/2023,Monday,Highway,0,1,27,Phone,0,4,Medium,8691.36746,black,20342.4402,5009.360744,500,964.79,8.069645493,6,0
-45,F,0,57,60889.6,0,1,Own,12/31/2023,Sunday,Local,1,0,50,Phone,1,3,Medium,41194.09871,white,16502.57797,2314.389231,1000,1439.34,8.668064407,5,0
-28,M,1,83,53315.2,0,1,Rent,9/28/2024,Saturday,Parking Lot,0,1,97,Phone,1,3,Medium,11213.12223,red,26346.03809,4432.226653,1000,1198.15,8.929089579,2,0
-55,F,1,93,64113.6,1,1,Own,10/17/2024,Thursday,Local,3,0,51,Phone,1,3,Compact,32829.02668,blue,5747.298004,1882.484537,500,1398.51,8.835088933,6,1
-51,F,1,87,162891.2,1,0,Rent,10/14/2024,Monday,Highway,2,0,99,Phone,1,4,Compact,31615.03599,other,28699.249,7990.167818,500,1355.08,8.550854393,4,0
-41,F,0,66,29408,1,0,Rent,2/24/2023,Friday,Parking Lot,0,0,99,Phone,1,7,Medium,13942.05244,gray,41405.79596,3996.453104,500,1158.03,9.701092284,5,1
-50,M,1,68,62593.6,1,1,Own,6/9/2024,Sunday,Parking Lot,0,1,3,Phone,1,7,Compact,17149.64126,red,11575.14651,3043.078453,1000,1372.27,8.95681254,4,0
-47,F,1,79,61592,1,1,Own,7/29/2024,Monday,Parking Lot,0,0,1,Phone,1,4,Medium,28423.24271,gray,42880.44492,6387.075386,1000,1275.39,10.38860723,8,1
-49,F,0,79,82292.8,0,1,Own,10/30/2024,Wednesday,Local,1,1,24,Phone,1,7,Compact,11488.23238,silver,19754.24336,6706.715266,500,1344.36,7.47937187,3,0
-33,F,1,64,95934.4,1,0,Rent,2/19/2024,Monday,Highway,0,0,3,Phone,0,2,Medium,12267.68033,gray,13732.00306,1971.468572,500,1203.24,7.617566343,3,0
-44,M,1,89,80561.6,1,1,Own,11/13/2024,Wednesday,Highway,0,0,21,Phone,1,3,Medium,49584.22238,gray,47665.79269,7193.215579,1000,1152.4,6.924367299,3,0
-33,F,1,57,75953.6,1,1,Rent,3/18/2023,Saturday,Parking Lot,0,0,96,Phone,1,8,Large,31494.75576,other,9692.92145,7457.212527,2000,1142.62,7.019133346,2,0
-52,F,1,70,82292.8,1,1,Rent,9/12/2023,Tuesday,Parking Lot,0,0,14,Phone,1,8,Compact,28494.95994,gray,34879.35173,6669.939824,500,1229.16,10.04717681,0,0
-41,M,1,64,80561.6,1,0,Rent,6/22/2023,Thursday,Local,2,0,20,Phone,1,3,Large,24455.90722,red,32964.01489,7713.185245,500,1706.79,10.26960072,8,0
-58,M,1,86,82292.8,0,1,Own,8/21/2024,Wednesday,Local,1,0,93,Phone,0,4,Large,14203.39611,silver,34878.65574,3798.774361,500,885.08,8.619270212,2,0
-37,F,1,72,72593.6,1,1,Rent,5/20/2024,Monday,Local,2,0,99,Phone,1,4,Large,9367.193013,black,8871.641743,8015.944434,500,1046.58,8.276694232,3,0
-63,F,0,89,66300.8,1,0,Own,3/3/2024,Sunday,Local,2,1,44,Phone,0,8,Medium,17901.32007,black,52692.08773,7462.860816,500,1382.88,8.167530488,3,1
-35,F,1,68,56873.6,1,1,Own,12/30/2024,Monday,Local,0,1,83,Phone,0,7,Large,31524.63393,white,10721.7675,2018.040967,1000,1141.35,9.368615794,2,0
-42,M,0,68,93347.2,1,0,Own,3/24/2024,Sunday,Highway,0,1,2,Phone,1,3,Large,11534.5613,gray,30124.33636,2245.716441,1000,986.53,8.042216093,3,0
-48,M,1,94,80561.6,0,1,Rent,5/12/2024,Sunday,Parking Lot,3,0,0,Phone,1,6,Compact,25215.6433,white,17997.97862,4501.841953,500,1722.95,8.096150872,2,0
-53,M,1,75,63524.8,1,0,Own,2/23/2024,Friday,Local,0,0,0,Phone,0,2,Large,15287.00801,other,15750.40069,3729.623072,2000,1281.07,9.306265973,4,0
-38,F,1,72,58209.6,1,0,Rent,5/30/2023,Tuesday,Parking Lot,0,0,56,Phone,1,6,Large,13844.87602,gray,33318.56541,2361.170033,500,1011.92,8.195952079,6,0
-46,F,1,74,61276.8,1,0,Own,2/1/2023,Wednesday,Parking Lot,1,0,9,Phone,1,4,Compact,37107.88786,gray,16664.41035,5422.67774,500,1301.72,9.88013309,2,0
-35,F,0,87,86892.8,1,1,Own,11/23/2023,Thursday,Parking Lot,0,0,92,Phone,0,1,Large,19600.90487,gray,18686.10785,5627.615502,500,767.14,8.064835853,4,0
-23,F,0,63,70152,1,1,Rent,12/4/2024,Wednesday,Local,0,0,73,Phone,0,4,Large,25707.24161,silver,16029.7098,5984.304844,1000,1538.26,9.369675313,5,0
-51,M,0,80,62929.6,1,0,Own,3/20/2024,Wednesday,Local,0,1,2,Phone,1,8,Compact,14774.95313,red,16085.05867,2930.331295,500,1314.6,8.402431024,3,1
-52,F,0,68,63228.8,1,1,Own,10/10/2024,Thursday,Highway,0,1,0,Phone,1,6,Medium,30100.26728,red,20823.61491,5670.095421,1000,1515.18,10.75748484,4,0
-27,M,0,87,82292.8,1,1,Rent,12/5/2024,Thursday,Highway,0,0,57,Phone,1,2,Medium,25604.80108,black,26180.26783,4214.161394,1000,2047.59,9.784155061,4,0
-80,M,1,49,72593.6,0,0,Own,2/12/2023,Sunday,Local,1,0,52,Phone,1,6,Compact,12946.99314,white,19294.14962,7547.316852,1000,1083.72,7.054656296,0,0
-43,M,0,32,20169.6,1,1,Own,9/1/2023,Friday,Local,0,0,6,Phone,0,6,Large,11544.57147,blue,28746.61543,3630.172038,2000,1371.78,9.188036472,6,1
-65,M,1,73,26795.2,0,1,Own,2/24/2023,Friday,Local,0,1,22,Phone,0,6,Compact,34869.33691,black,21577.29777,7656.655706,2000,932.14,8.850708118,3,1
-39,M,0,73,58630.4,1,0,Own,2/24/2024,Saturday,Parking Lot,0,0,96,Phone,1,7,Compact,16738.04241,silver,27218.24311,2248.581941,1000,773.99,9.915172704,2,0
-42,M,1,57,59760,1,1,Own,11/23/2024,Saturday,Highway,0,1,100,Phone,0,5,Compact,31016.35773,white,17797.18499,3165.039852,500,1459.97,8.424434192,3,1
-53,F,0,78,163536,1,0,Own,8/13/2024,Tuesday,Parking Lot,0,0,68,Phone,0,7,Medium,25747.59643,silver,28683.68958,3435.867014,500,865.33,7.876778029,9,0
-55,M,0,86,34105.6,1,0,Own,6/17/2024,Monday,Highway,0,1,69,Phone,0,2,Compact,10736.03065,blue,48844.29531,4683.967849,2000,1134.08,10.47431442,6,1
-49,F,1,62,62257.6,1,1,Own,5/31/2024,Friday,Highway,0,0,14,Phone,0,6,Large,65059.67998,white,22881.72598,5041.963304,2000,1304.67,8.949300458,2,0
-27,F,1,69,52723.2,1,0,Own,3/24/2024,Sunday,Local,3,0,86,Phone,1,7,Compact,10073.11234,blue,19897.24191,4045.376399,2000,1035.79,8.579935193,6,0
-53,M,1,92,43515.2,1,0,Own,7/24/2023,Monday,Highway,0,1,76,Phone,1,3,Large,14621.55121,white,23206.44925,2961.131957,2000,694.45,10.53081735,5,1
-38,F,1,70,58177.6,1,1,Own,1/4/2023,Wednesday,Local,0,0,97,Phone,0,5,Compact,9610.594669,blue,51668.90094,6294.042374,1000,1004.63,8.845165216,5,0
-68,F,1,66,37552,0,1,Rent,9/21/2024,Saturday,Local,1,1,97,Phone,1,7,Medium,26014.27743,white,19733.7098,2439.667767,1000,1194,9.180571971,1,1
-23,F,0,80,150181,1,0,Rent,11/27/2024,Wednesday,Local,0,0,99,Phone,1,3,Compact,50337.8293,gray,32663.07309,1625.777507,1000,1248.25,8.577774108,1,0
-43,F,1,88,160162,1,0,Own,12/23/2024,Monday,Local,0,0,84,Phone,1,5,Compact,37125.67225,gray,33959.29759,1694.017873,500,1338.54,9.532174967,5,0
-42,F,1,44,79776,1,1,Rent,12/3/2024,Tuesday,Local,0,0,0,Phone,1,9,Compact,63361.03214,silver,31320.12327,4933.853885,1000,1275.81,8.8681209,1,0
-52,F,1,76,63216,1,0,Own,7/14/2023,Friday,Local,1,1,41,Phone,0,2,Compact,13881.85867,gray,52882.29067,3643.979917,2000,972.47,7.161016793,3,0
-37,F,1,78,87776,1,1,Own,4/24/2023,Monday,Local,0,0,43,Phone,1,4,Medium,38455.01501,gray,29864.72945,3659.682727,500,806.31,8.176495295,7,0
-52,F,1,69,160162,0,0,Own,2/18/2023,Saturday,Parking Lot,5,0,76,Phone,1,4,Medium,17243.70739,white,45190.14619,3760.108962,500,947.75,8.786623863,3,0
-48,F,1,80,95941,0,0,Own,4/3/2024,Wednesday,Parking Lot,1,0,86,Phone,0,6,Compact,12917.2572,blue,13553.05598,5708.055749,2000,1018.73,8.689523936,6,0
-32,F,1,84,55462.4,0,1,Rent,7/1/2023,Saturday,Local,0,0,90,Phone,1,4,Large,17289.21237,silver,17203.24516,5771.836303,500,915.29,9.921034324,9,1
-45,F,0,41,87776,1,1,Own,6/29/2024,Saturday,Local,0,0,74,Phone,0,4,Large,24722.50125,gray,50905.8586,4486.818427,1000,1086.48,10.7964143,6,0
-41,M,1,91,19408,1,0,Own,12/9/2023,Saturday,Local,0,0,76,Phone,0,6,Medium,25179.98403,red,10762.97406,4584.123661,2000,765.64,8.893795219,3,1
-23,F,1,64,150181,1,0,Own,9/3/2023,Sunday,Highway,0,0,36,Phone,1,3,Compact,23685.50367,gray,6219.439115,4753.01309,2000,1327.41,9.221183782,3,0
-32,F,1,63,55449.6,1,0,Rent,1/13/2024,Saturday,Highway,0,0,32,Phone,0,3,Large,23000.62238,silver,7117.604451,3856.532491,500,903.32,10.02134434,4,0
-37,M,1,69,57795.2,0,0,Own,6/7/2024,Friday,Local,0,0,58,Phone,0,3,Large,34134.5335,silver,17069.92277,8553.746771,500,889.13,8.558991673,3,0
-51,M,0,73,150181,1,0,Rent,6/2/2023,Friday,Parking Lot,0,0,32,Phone,1,5,Medium,8302.884838,blue,12833.60782,4101.351151,2000,995.56,10.25876605,1,0
-43,M,0,65,60187.2,0,0,Rent,10/23/2024,Wednesday,Parking Lot,0,0,51,Phone,0,2,Large,4842.456173,silver,9882.544104,5750.977419,500,1379.93,7.536783984,5,1
-30,F,1,89,54400,1,0,Rent,6/29/2024,Saturday,Local,0,0,3,Phone,1,3,Large,20147.88261,silver,22833.77586,2272.118067,1000,1554.64,8.986190339,4,1
-54,F,1,30,163820.8,1,0,Rent,10/11/2023,Wednesday,Local,1,0,24,Phone,1,4,Compact,22710.86772,red,18852.53509,3121.382598,1000,1377.94,9.434962585,3,0
-48,M,1,52,150181,0,1,Rent,9/25/2024,Wednesday,Local,0,0,17,Phone,0,6,Medium,15995.36838,other,19570.05302,6269.606997,500,1259.02,9.221813141,6,0
-46,M,0,83,95941,1,0,Rent,8/24/2024,Saturday,Local,0,0,0,Phone,1,4,Large,57172.22455,other,54261.1606,4580.849745,500,1399.27,8.470496578,2,0
-55,M,1,50,160162,1,1,Own,10/3/2024,Thursday,Local,0,0,52,Phone,1,2,Large,26349.40418,white,17093.35733,4793.678945,500,1365.46,7.699852647,2,0
-45,F,1,82,60912,1,1,Rent,3/27/2023,Monday,Local,0,1,22,Phone,1,6,Compact,12458.86467,black,11712.65549,3567.298101,2000,1595.07,9.57388254,3,0
-37,M,1,87,57753.6,1,1,Own,9/21/2024,Saturday,Parking Lot,0,0,90,Phone,0,5,Medium,16338.82699,other,23806.10639,5340.626994,1000,1127.89,9.37361375,3,0
-40,M,0,71,59014.4,1,1,Own,11/11/2024,Monday,Parking Lot,0,0,26,Phone,1,6,Medium,27967.56375,other,40563.95393,4797.526974,1000,1829.63,8.950017296,3,0
-44,F,1,85,60537.6,0,1,Rent,10/26/2023,Thursday,Local,2,1,16,Phone,1,8,Compact,22390.58718,red,18074.51541,8178.356479,1000,904.7,8.348900664,2,1
-26,F,0,64,62144,1,1,Own,6/20/2024,Thursday,Local,1,0,0,Phone,1,2,Medium,17548.47072,white,36526.19442,2503.438089,500,1216.56,9.204012486,4,0
-48,M,1,91,61924.8,1,0,Rent,1/6/2024,Saturday,Local,0,1,64,Phone,1,6,Large,45536.25228,silver,37062.59236,4732.768023,2000,966.26,8.422823474,6,0
-53,M,0,59,160162,0,1,Rent,10/6/2024,Sunday,Highway,0,0,52,Phone,1,5,Large,27627.86559,red,17203.42597,3396.363297,500,1203.17,9.03712699,0,0
-77,M,1,83,95941,1,0,Rent,7/10/2024,Wednesday,Local,0,1,36,Phone,1,3,Medium,45498.18177,red,35390.50774,2293.342919,2000,1212.12,9.159244202,6,0
-40,F,0,76,59024,0,0,Own,12/7/2024,Saturday,Parking Lot,0,0,72,Phone,0,5,Medium,11666.58614,gray,57299.09723,3114.881097,500,1097.57,10.19611724,4,0
-24,F,1,98,30833.6,0,1,Own,11/25/2023,Saturday,Parking Lot,1,1,81,Phone,0,6,Compact,14976.48873,black,15994.91383,4401.706538,500,922.67,8.947221237,4,1
-43,F,0,75,80185.6,1,1,Own,11/8/2023,Wednesday,Parking Lot,1,0,35,Phone,0,2,Compact,15503.9907,black,17054.73409,11319.60982,500,1195.01,7.321504282,2,0
-58,F,1,80,64955.2,1,0,Own,2/20/2023,Monday,Local,0,1,28,Phone,1,4,Compact,17627.16152,blue,27152.64159,11589.08094,2000,1102.29,9.082078713,6,0
-49,F,0,80,62280,0,1,Rent,8/10/2024,Saturday,Parking Lot,3,0,80,Phone,1,6,Compact,12712.56889,gray,18364.82224,6456.132459,500,1527.95,9.112121282,4,0
-49,M,1,58,62254.4,1,1,Own,11/30/2023,Thursday,Local,0,0,96,Phone,1,3,Compact,34910.40405,gray,28211.03849,3648.663049,1000,1366.39,10.24949033,4,0
-43,M,1,81,160184,1,0,Own,8/28/2023,Monday,Local,2,1,21,Phone,1,1,Compact,17059.55326,black,47036.35003,3451.848241,1000,1403.9,10.30976206,3,0
-53,F,1,60,30833.6,0,0,Own,12/21/2023,Thursday,Local,0,0,32,Phone,0,10,Large,32348.74069,other,29288.44716,4496.81883,2000,1554.86,7.763337136,9,1
-62,M,0,42,96035.2,1,0,Rent,2/23/2024,Friday,Parking Lot,0,0,15,Phone,1,4,Large,23157.78558,other,10789.29226,7768.325519,2000,1724.46,8.94770139,2,0
-37,F,1,83,57787.2,0,1,Own,2/5/2023,Sunday,Highway,0,0,89,Phone,1,6,Compact,21344.5999,blue,26892.16878,7622.251837,2000,1241.04,9.192366601,8,0
-22,F,0,86,149433.6,1,0,Rent,10/26/2024,Saturday,Local,1,1,43,Phone,1,4,Large,26475.48716,blue,9013.200049,5503.953904,500,1757.21,9.735575698,7,0
-63,F,1,67,166299.2,0,1,Rent,6/19/2023,Monday,Local,1,1,94,Phone,1,4,Medium,32128.95358,gray,27829.58373,10465.63288,1000,802.24,9.713553156,4,0
-45,F,1,71,160883.2,0,0,Own,2/18/2023,Saturday,Local,0,0,10,Phone,1,2,Medium,15690.94509,silver,53232.68784,2123.455627,500,1090.03,9.319328295,5,0
-43,M,1,64,60196.8,0,0,Rent,2/11/2024,Sunday,Highway,0,1,78,Phone,1,7,Medium,14256.02402,white,10687.57224,966.3382059,2000,1082.72,10.10832291,5,0
-29,F,0,55,93876.8,1,0,Rent,1/9/2024,Tuesday,Local,0,0,3,Phone,0,5,Large,10840.19058,gray,20525.79757,6503.598195,1000,1191.8,8.863160238,5,0
-53,F,1,68,93496,1,0,Own,2/3/2023,Friday,Highway,0,0,73,Phone,0,5,Large,42925.0554,red,39407.10066,6560.484083,2000,1459.93,9.603453897,8,0
-50,M,1,59,80833.6,0,1,Own,2/5/2023,Sunday,Local,2,1,32,Phone,1,7,Compact,25435.13215,red,21765.28198,4850.013982,2000,1398.46,9.934635407,1,0
-40,F,1,98,59028.8,0,0,Own,4/3/2024,Wednesday,Local,0,1,92,Phone,0,6,Medium,7158.677139,black,11873.57888,1957.140937,2000,1161.91,8.741637912,5,0
-50,M,1,87,62579.2,0,0,Rent,2/20/2023,Monday,Local,0,0,91,Phone,0,3,Large,25263.12504,gray,10909.95856,2833.544182,1000,1117.17,7.816170914,5,0
-59,M,1,81,95219.2,0,1,Rent,1/9/2023,Monday,Parking Lot,3,0,100,Phone,1,4,Compact,19650.84767,blue,30113.38033,4409.993546,1000,1306.78,7.654032482,3,0
-40,M,0,59,80833.6,1,1,Rent,5/20/2023,Saturday,Parking Lot,0,0,53,Phone,1,6,Medium,17408.78599,blue,25028.08174,6007.476149,1000,1538.6,9.008098161,3,0
-38,F,1,76,18176,1,1,Rent,3/20/2023,Monday,Local,1,0,51,Phone,1,4,Large,27802.00044,gray,5550.720827,3291.487946,1000,1354.5,9.737468258,5,1
-26,M,1,44,52115.2,0,0,Rent,7/10/2024,Wednesday,Local,1,1,4,Phone,1,5,Compact,62256.51619,silver,28891.32384,2121.455087,1000,1346.27,8.258377398,5,0
-34,M,0,74,18176,0,1,Own,6/11/2023,Sunday,Parking Lot,1,0,86,Phone,1,8,Large,12294.58633,gray,22973.22882,2515.286561,1000,949.44,8.545785264,8,1
-60,M,0,71,165488,0,1,Own,6/23/2024,Sunday,Local,0,1,1,Phone,0,5,Medium,5477.839167,gray,12035.63239,2026.468383,2000,977.4,8.784291821,1,0
-37,F,1,60,157792,1,0,Own,3/23/2024,Saturday,Local,2,0,76,Phone,1,5,Compact,15105.36522,other,22205.70466,7527.844832,500,1187.53,8.034524615,3,0
-44,F,0,84,60524.8,1,0,Rent,7/1/2023,Saturday,Local,0,0,1,Phone,0,1,Medium,19930.9181,blue,5830.767085,*,500,1075.41,8.430835235,0,0
-60,F,1,95,65515.2,1,1,Own,8/31/2023,Thursday,Local,0,1,50,Phone,1,7,Medium,12347.37586,gray,17179.10442,4345.949974,1000,1575.86,7.696059893,5,0
-38,F,1,83,58208,1,0,Own,7/13/2024,Saturday,Highway,0,0,17,Phone,1,2,Medium,23832.43431,silver,17320.95006,2898.512666,1000,1056.71,9.483022976,4,0
-43,F,1,73,60163.2,1,0,Rent,5/4/2024,Saturday,Highway,1,1,95,Phone,1,6,Medium,28342.32657,black,42352.7102,6623.06584,1000,1313.64,7.962530736,2,0
-50,M,1,69,42620.8,1,0,Own,6/12/2023,Monday,Local,0,0,1,Phone,1,6,Compact,8303.065932,white,18538.4525,7762.016782,2000,1836.02,8.987906851,4,1
-45,F,0,51,60915.2,1,1,Rent,10/26/2024,Saturday,Local,0,0,51,Phone,0,4,Large,35498.15663,other,38452.18138,2980.458612,2000,1453.92,7.982352401,7,0
-34,M,1,69,56414.4,0,0,Own,1/20/2024,Saturday,Local,0,0,77,Phone,1,4,Large,18817.55948,red,13438.92726,5540.826327,500,914.22,10.28280272,1,0
-32,F,0,85,55459.2,1,1,Own,7/6/2024,Saturday,Local,4,0,96,Phone,1,6,Large,22030.22505,silver,30762.88558,1755.653893,1000,1096.79,9.409756348,4,0
-43,M,1,81,60171.2,0,0,Own,6/8/2024,Saturday,Local,0,0,38,Phone,0,5,Large,22246.30681,black,40916.69434,4186.956952,2000,1078.22,8.220948385,4,0
-46,M,1,92,61251.2,1,1,Rent,3/1/2023,Wednesday,Highway,0,0,25,Phone,0,7,Compact,34263.51186,white,42173.08115,3513.617828,2000,1117.42,8.080030445,6,0
-38,F,1,77,58198.4,1,1,Rent,6/27/2024,Thursday,Local,3,0,79,Phone,1,3,Large,12088.7745,gray,10726.82236,5791.698363,1000,1152.12,7.554926833,5,0
-34,F,1,85,56441.6,1,0,Own,1/20/2024,Saturday,Highway,0,0,1,Phone,0,5,Medium,5535.5142,silver,25486.96611,4061.311065,1000,1441.21,9.779270508,9,0
-34,F,1,91,56406.4,0,1,Rent,4/11/2023,Tuesday,Highway,0,0,0,Phone,0,2,Large,44130.43842,gray,17390.61134,5209.572696,1000,1861.43,11.9988526,6,1
-33,F,0,51,55945.6,1,0,Own,3/13/2024,Wednesday,Parking Lot,0,1,53,Phone,1,3,Compact,17610.10231,black,23742.04391,3779.277017,1000,1570.86,8.449910144,5,1
-45,F,0,86,60913.6,1,1,Own,11/24/2023,Friday,Parking Lot,0,0,62,Phone,0,8,Compact,31284.84542,other,31516.36918,3885.14916,2000,791.47,8.396468188,3,1
-37,F,1,83,57748.8,0,1,Rent,7/17/2024,Wednesday,Local,4,0,77,Phone,1,6,Compact,23062.99847,white,14997.99451,3669.712775,500,1047.06,8.67630574,3,0
-62,M,1,7,66017.6,1,0,Rent,2/26/2024,Monday,Local,0,0,94,Phone,0,9,Medium,17859.09452,red,23060.41485,2216.744827,1000,1226.78,10.53901981,4,0
-48,F,1,63,61964.8,0,0,Rent,10/11/2023,Wednesday,Highway,0,0,19,Phone,1,1,Compact,26053.86343,silver,10685.32624,6342.291249,500,1280.9,8.838758134,6,0
-45,M,1,64,60908.8,0,1,Own,6/22/2023,Thursday,Parking Lot,0,0,21,Phone,1,6,Medium,34648.07601,blue,10960.75602,2790.18834,2000,1472.77,7.666177921,6,0
-46,F,1,76,80833.6,0,1,Rent,2/12/2024,Monday,Parking Lot,0,0,73,Phone,1,5,Large,6906.532255,black,12745.16368,4296.61233,500,1532.8,9.962441847,6,0
-36,F,0,75,57344,0,1,Own,5/25/2024,Saturday,Parking Lot,3,0,41,Phone,1,7,Medium,20008.3457,red,51446.02077,5196.603611,500,862.92,8.729629276,4,0
-32,M,1,88,55444.8,1,1,Own,12/14/2024,Saturday,Local,1,0,50,Phone,1,4,Compact,14978.99552,gray,29557.6197,2331.79155,2000,1486.04,8.291571587,4,1
-38,F,1,35,58203.2,1,0,Own,11/10/2023,Friday,Local,0,0,100,Phone,0,8,Large,37420.29057,blue,86397.67734,4713.893503,1000,870.55,8.842442263,7,0
-56,F,1,93,64376,1,0,Rent,2/12/2024,Monday,Parking Lot,0,0,82,Phone,1,6,Compact,10114.42039,other,16729.9828,2977.158065,2000,1344.56,9.14221185,5,0
-46,M,1,86,61225.6,1,1,Own,11/2/2024,Saturday,Local,0,1,30,Phone,1,6,Large,15857.01303,other,29210.72233,4116.446388,1000,1168.8,10.11031807,1,0
-36,M,1,54,80833.6,1,1,Own,*,*,Local,0,0,80,Phone,1,5,Large,18925.20554,white,17865.00762,3173.067568,1000,1164.97,10.28876143,4,0
-52,M,0,61,63224,1,1,Own,9/8/2024,Sunday,Local,0,0,64,Phone,0,3,Large,22776.36869,black,22851.21668,6593.308297,1000,796.35,10.70599929,7,0
-31,F,1,76,80833.6,1,1,Own,8/31/2024,Saturday,Local,0,0,49,Phone,1,7,Medium,12191.15147,black,22113.15778,4517.233987,500,1251.16,9.344463166,8,0
-59,F,1,82,65220.8,1,1,Rent,6/14/2023,Wednesday,Parking Lot,1,0,43,Phone,1,8,Compact,13261.10489,white,29226.48324,6364.884465,2000,1526.11,9.614062606,4,0
-46,F,1,95,61268.8,0,0,Rent,1/9/2024,Tuesday,Local,0,0,35,Phone,1,4,Compact,9260.143939,white,18145.26994,3826.75094,1000,1028.44,7.624294431,3,0
-46,F,0,91,61267.2,0,1,Own,8/13/2023,Sunday,Parking Lot,0,0,61,Phone,1,5,Large,33332.70991,black,26812.85188,4094.202447,2000,1009.37,7.992894432,4,0
-36,M,0,65,57356.8,1,1,Rent,11/20/2023,Monday,Parking Lot,0,0,47,Phone,1,6,Medium,23018.4486,silver,15177.19353,6699.86916,500,1093.07,8.966243045,2,0
-47,M,1,59,61611.2,1,0,Own,1/23/2023,Monday,Parking Lot,0,0,35,Phone,1,5,Large,9579.034619,black,25656.91377,6561.377569,1000,1325.44,9.255703949,4,0
-47,F,1,79,61588.8,1,1,Own,2/21/2023,Tuesday,Local,0,0,51,Phone,0,12,Large,26726.72471,red,18068.6802,4239.357993,2000,1017.18,7.833109594,1,0
-49,M,1,82,21312.8,1,1,Own,4/6/2023,Thursday,Highway,2,0,2,Phone,1,4,Large,29722.52219,red,22321.9391,4997.802377,1000,1526.61,9.58068656,4,1
-49,M,1,84,62257.6,0,0,Own,1/7/2024,Sunday,Local,0,0,79,Phone,0,5,Compact,27177.50111,other,16348.97264,5229.938915,1000,1496.44,9.122313765,5,0
-32,F,1,94,55440,1,0,Own,5/25/2024,Saturday,Local,0,1,9,Phone,0,4,Large,30813.36151,red,36693.72552,8958.410015,2000,1421.59,8.969882285,4,0
-52,F,1,45,21312.8,1,1,Own,12/24/2023,Sunday,Local,0,0,5,Phone,0,5,Compact,15801.48714,red,28407.7968,4231.124069,500,1433.24,9.516380731,3,1
-34,M,1,61,99016,0,0,Own,2/20/2023,Monday,Local,0,0,98,Phone,0,7,Medium,18981.99702,silver,50188.23601,7100.97818,500,1135.43,7.916400706,3,0
-24,M,1,94,50865.6,1,0,Rent,7/28/2024,Sunday,Local,1,1,100,Phone,1,3,Large,39000.17283,other,47946.70851,4209.201879,2000,1118.76,10.87186281,8,0
-38,M,1,82,58196.8,0,0,Own,6/5/2023,Monday,Highway,1,0,29,Phone,1,2,Large,35003.14272,silver,16343.13924,7118.643428,1000,1588.22,10.1963285,3,0
-40,F,0,58,59036.8,1,1,Own,5/13/2023,Saturday,Local,0,0,100,Phone,0,4,Medium,39747.37901,gray,13804.73081,4179.408074,500,1537.07,11.50480426,8,1
-37,F,1,82,57763.2,1,1,Own,1/21/2023,Saturday,Local,2,0,1,Phone,1,7,Compact,12924.18126,black,28495.64636,5895.060232,2000,1558.86,8.72931679,4,0
-50,M,1,17,62596.8,1,1,Own,4/3/2024,Wednesday,Parking Lot,0,0,44,Phone,1,5,Large,32062.98902,blue,31728.65311,9741.253857,1000,973.5,8.811832931,3,0
-37,F,1,84,57785.6,1,1,Own,1/25/2024,Thursday,Local,0,0,2,Phone,0,4,Medium,24625.41087,red,43428.78984,6812.278667,2000,1153.54,7.647213182,5,0
-46,F,0,80,99016,1,0,Own,12/18/2023,Monday,Local,0,0,50,Phone,0,5,Compact,20069.5488,other,22344.62395,3254.232783,1000,1677.26,8.758863579,5,0
-46,F,1,74,61257.6,0,1,Own,2/20/2024,Tuesday,Local,0,0,97,Phone,0,5,Medium,21949.73979,black,11331.36292,3349.885829,500,989.24,6.891588763,6,0
-41,M,0,94,59398.4,1,0,Own,5/10/2023,Wednesday,Parking Lot,3,*,25,Phone,1,10,Medium,19794.49977,black,14192.78995,2931.701027,500,1233.85,9.02640923,6,0
-42,F,1,56,59806.4,1,1,Rent,7/5/2024,Friday,Highway,0,0,93,Phone,1,6,Large,31065.71365,silver,27896.68974,10615.79245,1000,1435.09,8.895200635,1,0
-36,M,0,83,57372.8,1,0,Rent,12/3/2023,Sunday,Local,0,0,6,Phone,1,2,Large,4801.586465,silver,28537.82784,1759.307271,500,1733.56,9.506527746,1,0
-36,F,1,88,57331.2,1,0,Own,3/31/2023,Friday,Parking Lot,0,0,48,Phone,0,4,Medium,11514.58801,silver,33159.26614,5563.078156,500,1533.07,9.351388182,4,0
-31,F,1,69,54969.6,1,1,Rent,5/19/2024,Sunday,Highway,0,0,68,Phone,1,3,Medium,18450.20513,silver,35193.22761,4485.747876,1000,1358.03,9.205023384,3,1
-36,M,1,51,87347.2,1,1,Own,9/17/2023,Sunday,Local,0,0,51,Phone,0,4,Large,16041.39282,blue,11406.54702,4168.514175,1000,1008.79,9.85814333,4,0
-49,M,1,71,92268.8,1,1,Rent,7/8/2023,Saturday,Local,0,0,53,Phone,1,2,Compact,17161.59931,white,19203.75685,3160.49478,1000,1141.1,9.851576676,4,0
-50,M,1,78,142587.2,1,1,Rent,11/14/2024,Thursday,Highway,0,0,3,Phone,1,6,Compact,40803.46741,black,25346.22732,3316.314729,1000,1397,9.356110163,3,0
-34,M,0,60,87347.2,1,1,Rent,4/7/2024,Sunday,Highway,0,0,16,Phone,1,6,Large,21041.9807,other,23428.43261,4232.485332,1000,1664.66,7.949195861,5,0
-54,F,1,43,63838.4,1,1,Own,10/30/2023,Monday,Local,0,1,39,Phone,0,4,Large,20830.70884,other,29391.36647,8506.780232,500,1063.67,7.074484569,7,0
-47,F,1,90,92268.8,1,1,Own,1/23/2023,Monday,Local,0,0,12,Phone,0,4,Large,9946.42064,blue,11089.26866,5272.923584,500,1339.39,8.632953707,2,0
-30,M,0,90,92268.8,1,1,Rent,11/19/2023,Sunday,Highway,3,0,6,Phone,1,5,Medium,29511.37485,silver,36654.69837,3178.30613,1000,830.31,8.530392974,2,0
-61,M,1,70,65771.2,1,1,Own,6/2/2023,Friday,Local,1,0,72,Phone,0,2,Compact,7767.838805,white,34691.73405,4105.492242,1000,1230.76,8.51203989,3,1
-46,M,1,64,87347.2,1,1,Rent,5/4/2024,Saturday,Local,0,1,51,Phone,0,2,Medium,24089.74383,silver,29585.39788,5170.921934,500,1255.02,8.665386848,2,0
-73,M,1,78,142587.2,0,1,Own,10/6/2023,Friday,Parking Lot,0,1,5,Phone,0,4,Large,44784.42636,white,19511.0824,2532.794032,2000,836.11,9.26353936,7,0
-53,M,1,61,63516.8,0,0,Own,8/9/2024,Friday,Local,5,0,39,Phone,0,5,Large,13034.8971,white,17700.98346,3556.291353,2000,1124.69,8.801389885,5,0
-40,F,0,89,59043.2,1,1,Rent,2/1/2023,Wednesday,Highway,0,0,50,Phone,0,5,Medium,28153.44018,red,11264.03307,7783.530246,2000,1609.11,9.62286334,6,0
-40,M,1,82,58995.2,1,0,Rent,4/26/2023,Wednesday,Parking Lot,0,0,32,Phone,1,3,Compact,17763.13976,gray,29813.74414,4945.9018,500,1295.87,8.625569205,4,1
-49,F,0,53,62260.8,1,0,Own,12/2/2024,Monday,Local,2,0,20,Phone,1,1,Medium,9321.378452,black,17379.23024,4868.287479,500,1161.03,9.309938174,4,0
-42,M,1,81,79776,1,1,Own,9/18/2023,Monday,Highway,1,0,98,Phone,0,5,Compact,34693.07087,red,12317.52272,5686.488432,2000,1441.06,8.490658873,11,0
-36,F,0,10,57323.2,1,0,Rent,6/6/2024,Thursday,Parking Lot,0,1,74,Phone,1,9,Medium,16984.63015,blue,21138.02513,7024.657362,1000,1097.99,9.950917546,6,0
-42,M,1,76,142587.2,1,0,Rent,3/13/2023,Monday,Highway,0,1,99,Phone,1,2,Medium,9774.418315,black,27165.73747,6061.562318,500,1616.26,9.189817459,5,0
-38,F,1,77,58201.6,0,1,Own,11/7/2023,Tuesday,Parking Lot,0,0,1,Phone,0,5,Compact,52923.52156,silver,25240.81415,4707.653492,1000,968.46,9.662150596,7,1
-25,F,1,86,51516.8,1,1,Rent,6/3/2024,Monday,Local,0,1,33,Phone,0,4,Medium,45124.13459,white,9613.906557,6832.436966,1000,1537.33,11.1877915,5,0
-44,F,1,81,60545.6,1,1,Rent,5/24/2024,Friday,Highway,0,1,30,Phone,0,4,Compact,17602.38334,black,15369.04104,8496.042311,500,912.3,9.007190235,4,1
-40,M,1,78,59040,1,1,Own,1/7/2023,Saturday,Local,0,0,55,Phone,0,7,Medium,18863.47612,red,8650.372742,4776.143594,500,1312.22,8.568017549,6,1
+Month,WeekOfMonth,DayOfWeek,Make,AccidentArea,DayOfWeekClaimed,MonthClaimed,WeekOfMonthClaimed,Sex,MaritalStatus,Age,Fault,PolicyType,VehicleCategory,VehiclePrice,FraudFound_P,PolicyNumber,RepNumber,Deductible,DriverRating,Days_Policy_Accident,Days_Policy_Claim,PastNumberOfClaims,AgeOfVehicle,AgeOfPolicyHolder,PoliceReportFiled,WitnessPresent,AgentType,NumberOfSuppliments,AddressChange_Claim,NumberOfCars,Year,BasePolicy
+Apr,3,Wednesday,Toyota,Urban,Wednesday,May,2,Male,Married,38,Third Party,Sedan - All Perils,Sedan,20000 to 29000,0,1844,9,400,1,more than 30,more than 30,2 to 4,7 years,36 to 40,No,No,External,none,no change,1 vehicle,1994,All Perils
+Aug,3,Friday,Mazda,Urban,Tuesday,Aug,4,Female,Married,64,Policy Holder,Sedan - Liability,Sport,20000 to 29000,0,8000,7,400,1,more than 30,more than 30,2 to 4,more than 7,51 to 65,No,No,External,more than 5,no change,1 vehicle,1995,Liability
+Mar,1,Thursday,Mazda,Urban,Tuesday,Mar,3,Male,Married,43,Policy Holder,Sedan - Collision,Sedan,20000 to 29000,0,2194,15,500,2,more than 30,more than 30,none,more than 7,36 to 40,No,No,External,more than 5,2 to 3 years,1 vehicle,1994,Collision
+Jul,4,Wednesday,Chevrolet,Urban,Wednesday,Aug,1,Male,Single,34,Policy Holder,Sedan - Collision,Sedan,20000 to 29000,0,2558,6,400,1,more than 30,more than 30,more than 4,6 years,31 to 35,No,No,External,3 to 5,no change,1 vehicle,1994,Collision
+Jan,1,Sunday,Pontiac,Urban,Thursday,Dec,5,Male,Married,58,Policy Holder,Sedan - All Perils,Sedan,20000 to 29000,0,3168,9,400,3,more than 30,more than 30,1,more than 7,51 to 65,No,No,External,3 to 5,no change,1 vehicle,1994,All Perils
+Aug,3,Friday,Mazda,Urban,Monday,Aug,4,Male,Married,34,Policy Holder,Sedan - Collision,Sedan,20000 to 29000,0,8344,10,400,2,more than 30,more than 30,none,5 years,31 to 35,No,No,External,none,no change,1 vehicle,1995,Collision
+Oct,2,Tuesday,Pontiac,Urban,Monday,Oct,5,Male,Single,34,Third Party,Sedan - Collision,Sedan,20000 to 29000,0,14369,7,400,4,more than 30,more than 30,none,6 years,31 to 35,No,No,External,more than 5,no change,1 vehicle,1996,Collision
+Jul,4,Monday,Honda,Urban,Tuesday,Jul,4,Female,Married,44,Policy Holder,Sedan - Liability,Sport,20000 to 29000,0,1325,13,400,2,more than 30,more than 30,more than 4,7 years,36 to 40,No,No,External,1 to 2,no change,1 vehicle,1994,Liability
+Aug,5,Monday,Toyota,Urban,Monday,Aug,5,Male,Married,37,Policy Holder,Sedan - Liability,Sport,20000 to 29000,0,8154,9,700,1,more than 30,more than 30,2 to 4,7 years,36 to 40,No,No,External,3 to 5,no change,1 vehicle,1995,Liability
+Apr,2,Saturday,Toyota,Urban,Monday,Apr,2,Female,Single,34,Policy Holder,Sedan - Collision,Sedan,20000 to 29000,0,9473,9,400,3,more than 30,more than 30,2 to 4,5 years,31 to 35,No,No,External,more than 5,no change,1 vehicle,1995,Collision
+Dec,2,Monday,Mazda,Urban,Thursday,Dec,3,Male,Single,21,Third Party,Sedan - Collision,Sedan,20000 to 29000,0,3379,4,400,2,more than 30,more than 30,2 to 4,5 years,26 to 30,No,No,External,none,no change,1 vehicle,1994,Collision
+Jun,1,Friday,Pontiac,Urban,Monday,Jun,1,Female,Single,31,Policy Holder,Sedan - Collision,Sedan,20000 to 29000,0,3351,7,400,4,more than 30,more than 30,1,6 years,31 to 35,No,No,External,none,no change,1 vehicle,1994,Collision
+Nov,4,Friday,Toyota,Rural,Monday,Nov,5,Male,Single,35,Policy Holder,Sedan - Collision,Sedan,less than 20000,0,5121,9,400,3,more than 30,more than 30,1,4 years,31 to 35,No,No,External,1 to 2,no change,1 vehicle,1994,Collision
+May,1,Monday,Dodge,Urban,Tuesday,May,2,Male,Married,54,Policy Holder,Sedan - Liability,Sport,30000 to 39000,0,11679,12,400,3,more than 30,more than 30,1,more than 7,41 to 50,No,No,External,more than 5,no change,1 vehicle,1996,Liability
+Jan,5,Monday,Pontiac,Urban,Tuesday,Feb,1,Male,Single,28,Policy Holder,Sedan - Liability,Sport,20000 to 29000,0,11049,9,400,4,more than 30,more than 30,2 to 4,6 years,31 to 35,No,No,External,none,no change,1 vehicle,1995,Liability
+Sep,1,Tuesday,Mazda,Urban,Thursday,Sep,3,Male,Married,67,Third Party,Sedan - All Perils,Sedan,20000 to 29000,0,3078,11,400,4,more than 30,more than 30,2 to 4,more than 7,over 65,No,No,External,3 to 5,no change,1 vehicle,1994,All Perils
+Nov,2,Tuesday,Pontiac,Urban,Wednesday,Nov,2,Female,Married,29,Third Party,Sedan - All Perils,Sedan,20000 to 29000,0,14911,12,400,4,more than 30,more than 30,none,5 years,31 to 35,No,No,External,none,4 to 8 years,2 vehicles,1996,All Perils
+Mar,3,Friday,Mazda,Urban,Monday,Mar,3,Male,Single,26,Policy Holder,Sedan - Collision,Sedan,20000 to 29000,0,13645,5,400,1,more than 30,more than 30,none,6 years,31 to 35,No,No,External,none,no change,1 vehicle,1996,Collision
+Jan,2,Tuesday,Accura,Urban,Friday,Jan,2,Male,Married,44,Policy Holder,Sedan - All Perils,Sedan,40000 to 59000,0,3561,8,400,3,more than 30,more than 30,1,5 years,36 to 40,No,No,External,none,no change,1 vehicle,1994,All Perils
+Feb,2,Friday,Mazda,Urban,Monday,Feb,3,Male,Married,36,Third Party,Sedan - Collision,Sedan,20000 to 29000,0,7431,2,400,3,more than 30,more than 30,1,7 years,36 to 40,No,No,External,3 to 5,no change,1 vehicle,1995,Collision
+Nov,1,Friday,Toyota,Urban,Monday,Nov,1,Male,Married,43,Policy Holder,Sedan - Liability,Sport,30000 to 39000,0,331,5,400,2,more than 30,more than 30,2 to 4,7 years,36 to 40,No,No,External,none,no change,1 vehicle,1994,Liability
+Feb,3,Monday,Mazda,Rural,Tuesday,Feb,4,Male,Married,69,Third Party,Sedan - All Perils,Sedan,30000 to 39000,0,10226,2,400,1,more than 30,more than 30,none,more than 7,over 65,No,No,External,1 to 2,no change,1 vehicle,1995,All Perils
+Mar,5,Wednesday,Mazda,Urban,Wednesday,Apr,1,Male,Married,29,Third Party,Sedan - Collision,Sedan,20000 to 29000,0,11275,16,400,4,more than 30,more than 30,1,5 years,31 to 35,No,No,External,more than 5,no change,1 vehicle,1995,Collision
+Jun,3,Monday,VW,Rural,Tuesday,Jun,3,Male,Married,56,Policy Holder,Sedan - Liability,Sport,more than 69000,0,13078,8,400,3,more than 30,more than 30,more than 4,more than 7,51 to 65,No,No,External,1 to 2,no change,1 vehicle,1996,Liability
+Mar,3,Tuesday,Toyota,Urban,Wednesday,Mar,3,Male,Married,36,Policy Holder,Sedan - Collision,Sedan,20000 to 29000,0,11961,4,400,3,more than 30,more than 30,1,6 years,36 to 40,No,No,External,none,no change,1 vehicle,1996,Collision
+Feb,2,Thursday,Pontiac,Urban,Friday,Feb,2,Female,Married,43,Policy Holder,Sedan - All Perils,Sedan,20000 to 29000,0,8502,13,400,2,more than 30,more than 30,1,7 years,36 to 40,No,No,External,more than 5,no change,1 vehicle,1995,All Perils
+Oct,5,Friday,Pontiac,Urban,Friday,Nov,2,Male,Married,29,Policy Holder,Sedan - All Perils,Sedan,20000 to 29000,1,7522,3,400,2,more than 30,more than 30,1,6 years,31 to 35,No,No,External,none,no change,1 vehicle,1995,All Perils
+Feb,3,Tuesday,Pontiac,Urban,Thursday,Feb,3,Male,Married,62,Third Party,Sedan - All Perils,Sedan,20000 to 29000,0,10284,15,400,1,more than 30,more than 30,2 to 4,5 years,51 to 65,Yes,No,External,none,1 year,1 vehicle,1995,All Perils
+Jul,4,Monday,Mazda,Urban,Thursday,Jul,4,Male,Single,29,Policy Holder,Sedan - Collision,Sedan,20000 to 29000,0,11012,4,400,4,more than 30,more than 30,1,6 years,31 to 35,No,No,External,none,1 year,1 vehicle,1995,Collision
+Aug,4,Friday,Ford,Urban,Monday,Aug,5,Male,Married,50,Policy Holder,Sedan - All Perils,Sedan,20000 to 29000,0,4931,5,400,4,more than 30,more than 30,none,more than 7,41 to 50,No,No,External,more than 5,no change,1 vehicle,1994,All Perils
+Oct,4,Wednesday,Toyota,Urban,Saturday,Nov,1,Male,Married,45,Policy Holder,Sedan - Liability,Sport,20000 to 29000,0,1380,16,400,1,more than 30,more than 30,1,7 years,36 to 40,No,No,External,none,no change,1 vehicle,1994,Liability
+Oct,1,Monday,Toyota,Rural,Tuesday,Oct,1,Male,Single,32,Policy Holder,Sedan - All Perils,Sedan,less than 20000,0,14030,9,400,1,more than 30,more than 30,1,6 years,31 to 35,No,No,External,none,no change,1 vehicle,1996,All Perils
+Dec,3,Wednesday,Pontiac,Urban,Wednesday,Dec,3,Male,Married,49,Policy Holder,Sedan - All Perils,Sedan,20000 to 29000,0,12665,1,400,4,more than 30,more than 30,none,more than 7,41 to 50,No,No,External,more than 5,no change,1 vehicle,1996,All Perils
+Oct,2,Saturday,Chevrolet,Urban,Wednesday,Oct,2,Male,Married,43,Policy Holder,Sedan - Collision,Sedan,30000 to 39000,0,10087,8,400,2,more than 30,more than 30,2 to 4,7 years,36 to 40,No,No,External,more than 5,no change,3 to 4,1995,Collision
+Jun,3,Tuesday,Pontiac,Urban,Wednesday,Jun,3,Male,Married,42,Policy Holder,Sedan - Collision,Sedan,20000 to 29000,0,15358,7,400,3,more than 30,more than 30,2 to 4,7 years,36 to 40,No,No,External,more than 5,no change,1 vehicle,1996,Collision
+Nov,3,Friday,Pontiac,Urban,Monday,Nov,4,Male,Married,40,Policy Holder,Sedan - Collision,Sedan,30000 to 39000,0,14833,1,400,2,more than 30,more than 30,2 to 4,more than 7,36 to 40,No,No,External,more than 5,no change,1 vehicle,1996,Collision
+Mar,1,Thursday,Pontiac,Urban,Monday,Mar,1,Male,Married,65,Policy Holder,Sedan - All Perils,Sedan,less than 20000,0,11322,5,400,2,more than 30,more than 30,none,6 years,51 to 65,No,No,External,none,no change,1 vehicle,1995,All Perils
+Apr,2,Thursday,Accura,Urban,Thursday,Apr,3,Male,Married,33,Third Party,Sedan - Collision,Sedan,30000 to 39000,0,12418,12,400,4,more than 30,more than 30,2 to 4,7 years,31 to 35,No,No,External,more than 5,no change,1 vehicle,1996,Collision
+Jul,3,Friday,Toyota,Urban,Monday,Jul,4,Male,Married,48,Third Party,Sedan - All Perils,Sedan,20000 to 29000,0,13528,12,400,1,more than 30,more than 30,none,7 years,41 to 50,No,No,External,none,no change,1 vehicle,1996,All Perils
+Apr,4,Thursday,Toyota,Urban,Wednesday,Apr,4,Male,Married,42,Third Party,Sedan - All Perils,Sedan,more than 69000,0,9753,2,400,3,more than 30,more than 30,2 to 4,more than 7,36 to 40,No,No,External,1 to 2,no change,1 vehicle,1995,All Perils
+Aug,3,Wednesday,BMW,Urban,Tuesday,Aug,4,Male,Married,42,Policy Holder,Sedan - Collision,Sedan,30000 to 39000,0,12565,7,400,2,more than 30,more than 30,none,7 years,36 to 40,No,No,External,none,no change,1 vehicle,1996,Collision
+Sep,4,Friday,Honda,Urban,Tuesday,Sep,4,Male,Single,32,Policy Holder,Sport - Collision,Sport,more than 69000,1,6604,8,400,1,more than 30,more than 30,none,6 years,31 to 35,No,No,External,more than 5,no change,1 vehicle,1995,Collision
+Oct,2,Thursday,Pontiac,Urban,Friday,Oct,2,Male,Single,25,Policy Holder,Sedan - Liability,Sport,20000 to 29000,0,13512,8,400,3,more than 30,more than 30,none,4 years,26 to 30,No,No,External,more than 5,no change,1 vehicle,1996,Liability
+Mar,3,Tuesday,Pontiac,Urban,Tuesday,Mar,3,Male,Married,28,Policy Holder,Sedan - Collision,Sedan,30000 to 39000,0,6841,3,400,2,more than 30,more than 30,none,7 years,31 to 35,No,No,External,none,no change,1 vehicle,1995,Collision
+Jun,1,Friday,Mazda,Urban,Monday,Jun,2,Male,Married,33,Third Party,Sedan - All Perils,Sedan,20000 to 29000,0,2100,3,400,4,more than 30,more than 30,1,7 years,31 to 35,No,No,External,none,no change,1 vehicle,1994,All Perils
+May,1,Friday,Toyota,Rural,Tuesday,May,4,Male,Married,44,Policy Holder,Sedan - Collision,Sedan,30000 to 39000,1,11998,1,700,2,more than 30,more than 30,1,more than 7,36 to 40,No,No,External,none,no change,1 vehicle,1996,Collision
+Sep,4,Friday,Pontiac,Urban,Friday,Sep,4,Male,Married,50,Policy Holder,Sedan - Collision,Sedan,30000 to 39000,0,13303,14,400,4,more than 30,more than 30,2 to 4,7 years,41 to 50,No,No,External,none,no change,1 vehicle,1996,Collision
+Nov,5,Monday,Accura,Urban,Thursday,Dec,1,Male,Married,36,Policy Holder,Sedan - Collision,Sedan,more than 69000,0,1069,11,400,2,more than 30,more than 30,2 to 4,7 years,36 to 40,No,No,External,more than 5,no change,1 vehicle,1994,Collision
+Aug,3,Saturday,Honda,Urban,Monday,Aug,4,Male,Single,26,Policy Holder,Sedan - Collision,Sedan,20000 to 29000,0,10030,1,400,3,more than 30,more than 30,2 to 4,5 years,31 to 35,No,No,External,more than 5,no change,1 vehicle,1995,Collision
+Jan,1,Monday,Pontiac,Urban,Tuesday,Jan,3,Male,Single,28,Policy Holder,Sedan - Collision,Sedan,less than 20000,0,3565,5,400,2,more than 30,more than 30,1,6 years,31 to 35,No,No,External,none,no change,1 vehicle,1994,Collision
+Dec,3,Friday,Pontiac,Urban,Tuesday,Dec,3,Male,Single,35,Policy Holder,Sedan - Collision,Sedan,30000 to 39000,0,9806,7,400,2,more than 30,more than 30,1,7 years,31 to 35,No,No,External,none,no change,1 vehicle,1995,Collision
+Dec,1,Friday,Honda,Urban,Monday,Dec,3,Male,Married,69,Policy Holder,Sedan - Collision,Sedan,20000 to 29000,0,11406,13,400,2,more than 30,more than 30,2 to 4,more than 7,over 65,No,No,External,3 to 5,no change,1 vehicle,1996,Collision
+Jan,4,Friday,Pontiac,Urban,Monday,Jan,4,Male,Married,34,Third Party,Sedan - Liability,Sport,20000 to 29000,0,10402,3,400,1,more than 30,more than 30,more than 4,7 years,31 to 35,No,No,External,none,no change,1 vehicle,1995,Liability
+Aug,1,Tuesday,Honda,Urban,Thursday,Aug,1,Male,Single,20,Third Party,Sport - Collision,Sport,more than 69000,0,14331,14,400,1,more than 30,more than 30,2 to 4,4 years,21 to 25,No,No,External,none,no change,1 vehicle,1996,Collision
+Aug,5,Tuesday,Honda,Urban,Friday,Sep,2,Female,Single,28,Policy Holder,Sedan - Collision,Sedan,20000 to 29000,0,8047,8,400,1,more than 30,more than 30,1,6 years,31 to 35,No,No,External,more than 5,no change,1 vehicle,1995,Collision
+Jun,2,Sunday,Mazda,Urban,Monday,Jun,2,Male,Married,37,Policy Holder,Sedan - Collision,Sedan,20000 to 29000,0,12800,11,400,3,more than 30,more than 30,2 to 4,6 years,36 to 40,No,No,External,more than 5,no change,1 vehicle,1996,Collision
+Mar,1,Saturday,Ford,Urban,Monday,Mar,1,Male,Married,52,Policy Holder,Sedan - All Perils,Sedan,40000 to 59000,0,10919,7,400,1,more than 30,more than 30,1,more than 7,41 to 50,No,No,External,3 to 5,no change,1 vehicle,1995,All Perils
+Apr,1,Tuesday,Chevrolet,Urban,Friday,Apr,2,Male,Married,49,Policy Holder,Sedan - Liability,Sport,40000 to 59000,0,10323,15,400,1,more than 30,more than 30,more than 4,more than 7,41 to 50,No,No,External,more than 5,no change,1 vehicle,1995,Liability
+Jul,3,Monday,Saab,Rural,Wednesday,Jul,4,Male,Married,27,Policy Holder,Sedan - Collision,Sedan,30000 to 39000,0,4696,1,400,2,more than 30,more than 30,none,6 years,31 to 35,No,No,External,more than 5,no change,1 vehicle,1994,Collision
+Jul,3,Saturday,Pontiac,Urban,Tuesday,Aug,1,Male,Single,23,Policy Holder,Sedan - All Perils,Sedan,30000 to 39000,0,1217,1,400,2,more than 30,more than 30,1,5 years,26 to 30,No,No,External,none,no change,1 vehicle,1994,All Perils
+Sep,1,Saturday,Honda,Urban,Tuesday,Sep,1,Male,Single,27,Policy Holder,Sedan - Collision,Sedan,20000 to 29000,0,13371,16,400,4,more than 30,more than 30,1,6 years,31 to 35,No,No,External,none,no change,1 vehicle,1996,Collision
+Sep,1,Tuesday,Toyota,Urban,Thursday,Sep,2,Male,Married,41,Policy Holder,Sedan - Collision,Sedan,less than 20000,0,590,9,700,2,more than 30,more than 30,none,7 years,36 to 40,No,No,External,none,no change,1 vehicle,1994,Collision
+Aug,2,Tuesday,Saab,Urban,Friday,Aug,3,Male,Married,30,Policy Holder,Sedan - Collision,Sedan,20000 to 29000,0,8858,8,400,4,more than 30,more than 30,more than 4,6 years,31 to 35,No,No,External,none,no change,1 vehicle,1995,Collision
+Jan,1,Tuesday,Toyota,Urban,Tuesday,Jan,2,Male,Married,53,Third Party,Sedan - All Perils,Sedan,less than 20000,0,15365,8,400,4,more than 30,more than 30,2 to 4,more than 7,41 to 50,No,No,External,3 to 5,no change,1 vehicle,1996,All Perils
+Aug,5,Tuesday,Mazda,Urban,Wednesday,Aug,5,Male,Single,44,Policy Holder,Sedan - Collision,Sedan,20000 to 29000,0,1114,1,400,4,more than 30,more than 30,none,7 years,36 to 40,No,No,External,more than 5,4 to 8 years,2 vehicles,1994,Collision
+Feb,3,Monday,VW,Urban,Tuesday,Feb,4,Male,Married,54,Policy Holder,Sedan - Liability,Sport,40000 to 59000,0,2849,15,400,3,more than 30,more than 30,2 to 4,7 years,41 to 50,No,No,External,none,no change,1 vehicle,1994,Liability
+Jun,1,Friday,Chevrolet,Urban,Monday,Jun,3,Female,Married,30,Policy Holder,Sedan - Liability,Sport,30000 to 39000,0,5161,12,400,1,more than 30,more than 30,2 to 4,6 years,31 to 35,No,No,External,none,no change,1 vehicle,1994,Liability
+Apr,2,Thursday,Toyota,Urban,Wednesday,Apr,2,Male,Married,51,Policy Holder,Sedan - Liability,Sport,less than 20000,0,8829,9,400,4,more than 30,more than 30,more than 4,more than 7,41 to 50,No,No,External,more than 5,no change,1 vehicle,1995,Liability
+Apr,1,Tuesday,Pontiac,Urban,Wednesday,Apr,1,Male,Single,34,Third Party,Sedan - Collision,Sedan,30000 to 39000,0,14632,9,400,2,more than 30,more than 30,1,7 years,31 to 35,No,No,External,more than 5,no change,1 vehicle,1996,Collision
+Jun,3,Thursday,Toyota,Urban,Friday,Jun,3,Male,Single,35,Third Party,Sedan - Collision,Sedan,20000 to 29000,0,13602,2,400,3,more than 30,more than 30,none,7 years,31 to 35,No,No,External,3 to 5,no change,1 vehicle,1996,Collision
+Oct,3,Saturday,Pontiac,Urban,Monday,Oct,3,Male,Married,39,Policy Holder,Sedan - Collision,Sedan,30000 to 39000,0,2665,16,400,1,more than 30,more than 30,2 to 4,6 years,36 to 40,No,No,External,3 to 5,no change,1 vehicle,1994,Collision
+Dec,2,Monday,Honda,Urban,Wednesday,Dec,2,Male,Married,33,Policy Holder,Sedan - Liability,Sport,20000 to 29000,0,13010,13,400,2,more than 30,more than 30,2 to 4,6 years,31 to 35,No,No,External,none,no change,1 vehicle,1996,Liability
+Aug,3,Tuesday,Pontiac,Urban,Tuesday,Sep,4,Male,Married,54,Policy Holder,Sedan - Liability,Sport,30000 to 39000,0,7174,7,400,2,more than 30,more than 30,2 to 4,7 years,41 to 50,No,No,External,none,no change,1 vehicle,1995,Liability
+May,3,Friday,Mazda,Urban,Wednesday,May,4,Male,Married,33,Third Party,Sport - Collision,Sport,more than 69000,1,3520,11,500,4,more than 30,more than 30,none,7 years,31 to 35,No,No,External,3 to 5,2 to 3 years,1 vehicle,1994,Collision
+Dec,4,Tuesday,Mazda,Urban,Saturday,Jan,1,Male,Married,26,Policy Holder,Sedan - Collision,Sedan,40000 to 59000,0,14526,5,400,2,more than 30,more than 30,more than 4,7 years,31 to 35,No,No,External,none,no change,1 vehicle,1996,Collision
+Aug,4,Wednesday,Chevrolet,Urban,Wednesday,Aug,4,Male,Single,34,Policy Holder,Sedan - Collision,Sedan,30000 to 39000,0,13810,10,400,1,more than 30,more than 30,1,5 years,31 to 35,No,No,External,3 to 5,no change,1 vehicle,1996,Collision
+Apr,1,Saturday,Mazda,Urban,Monday,Apr,2,Male,Married,62,Policy Holder,Sedan - Collision,Sedan,20000 to 29000,1,11177,13,400,1,more than 30,more than 30,1,7 years,51 to 65,No,No,External,more than 5,no change,1 vehicle,1995,Collision
+Jan,4,Tuesday,Chevrolet,Urban,Tuesday,Jan,4,Male,Married,39,Policy Holder,Sedan - Liability,Sport,30000 to 39000,1,831,6,400,3,more than 30,more than 30,more than 4,7 years,36 to 40,No,No,External,none,no change,1 vehicle,1994,Liability
+Oct,2,Saturday,Chevrolet,Urban,Tuesday,Oct,2,Male,Married,65,Third Party,Sedan - All Perils,Sedan,20000 to 29000,0,9907,3,400,1,more than 30,more than 30,more than 4,more than 7,51 to 65,No,No,External,3 to 5,no change,1 vehicle,1995,All Perils
+May,5,Monday,Pontiac,Urban,Thursday,Jun,1,Male,Married,59,Policy Holder,Sedan - Collision,Sedan,30000 to 39000,0,4958,2,400,3,more than 30,more than 30,none,more than 7,51 to 65,No,No,External,none,no change,1 vehicle,1994,Collision
+Mar,3,Tuesday,Chevrolet,Urban,Thursday,Mar,3,Male,Single,33,Third Party,Sedan - All Perils,Sedan,more than 69000,0,2043,12,400,3,more than 30,more than 30,1,6 years,31 to 35,No,No,External,3 to 5,no change,1 vehicle,1994,All Perils
+Feb,1,Thursday,Toyota,Urban,Friday,Feb,1,Male,Married,36,Policy Holder,Sedan - Liability,Sport,20000 to 29000,0,7436,1,400,3,more than 30,more than 30,none,7 years,36 to 40,No,No,External,none,no change,1 vehicle,1995,Liability
+Jun,2,Tuesday,Pontiac,Urban,Monday,Jun,2,Male,Married,65,Policy Holder,Sedan - All Perils,Sedan,more than 69000,0,7349,12,400,2,more than 30,more than 30,1,more than 7,51 to 65,No,No,External,more than 5,no change,1 vehicle,1995,All Perils
+Sep,1,Sunday,Honda,Rural,Monday,Sep,1,Male,Single,18,Policy Holder,Sport - Collision,Sport,more than 69000,1,6150,6,400,4,more than 30,more than 30,none,5 years,21 to 25,No,No,External,none,no change,1 vehicle,1995,Collision
+Dec,4,Tuesday,Pontiac,Urban,Friday,Jan,4,Male,Married,30,Policy Holder,Sedan - Liability,Sport,20000 to 29000,0,282,4,400,2,more than 30,more than 30,more than 4,7 years,31 to 35,No,No,External,1 to 2,no change,1 vehicle,1994,Liability
+Jun,3,Thursday,Mazda,Urban,Tuesday,Jun,5,Male,Married,36,Third Party,Sedan - All Perils,Sedan,20000 to 29000,0,1307,9,400,3,more than 30,more than 30,none,7 years,36 to 40,No,No,External,more than 5,no change,1 vehicle,1994,All Perils
+Oct,2,Sunday,Honda,Urban,Thursday,Oct,2,Male,Single,30,Third Party,Sedan - Liability,Sport,20000 to 29000,0,11792,13,400,2,more than 30,more than 30,none,5 years,31 to 35,No,No,External,none,no change,1 vehicle,1996,Liability
+Jun,3,Tuesday,Pontiac,Urban,Thursday,Jul,1,Male,Married,36,Policy Holder,Sedan - Liability,Sport,30000 to 39000,0,8926,8,500,1,more than 30,more than 30,none,more than 7,36 to 40,No,No,External,none,2 to 3 years,2 vehicles,1995,Liability
+Mar,1,Sunday,Pontiac,Urban,Thursday,Mar,2,Male,Single,42,Policy Holder,Sedan - Liability,Sport,30000 to 39000,0,5634,11,400,4,more than 30,more than 30,2 to 4,7 years,36 to 40,No,No,External,1 to 2,no change,1 vehicle,1994,Liability
+May,2,Wednesday,Accura,Urban,Monday,May,3,Male,Married,60,Policy Holder,Utility - All Perils,Utility,more than 69000,1,3586,7,400,1,more than 30,more than 30,none,more than 7,51 to 65,No,No,External,3 to 5,no change,1 vehicle,1994,All Perils
+Dec,2,Thursday,Accura,Urban,Wednesday,Dec,3,Male,Single,32,Third Party,Sedan - Collision,Sedan,30000 to 39000,0,3445,10,400,3,more than 30,more than 30,1,7 years,31 to 35,No,No,External,none,4 to 8 years,3 to 4,1994,Collision
+Aug,3,Monday,Pontiac,Urban,Tuesday,Sep,2,Male,Single,31,Policy Holder,Sedan - All Perils,Sedan,20000 to 29000,0,4808,1,400,4,more than 30,more than 30,more than 4,7 years,31 to 35,No,No,External,none,no change,1 vehicle,1994,All Perils
+Dec,2,Sunday,Honda,Urban,Wednesday,Feb,3,Male,Single,0,Policy Holder,Utility - Liability,Utility,more than 69000,0,7473,12,400,3,more than 30,more than 30,2 to 4,new,16 to 17,No,No,External,none,no change,1 vehicle,1995,Liability
+Dec,2,Saturday,Pontiac,Urban,Thursday,Dec,3,Female,Single,35,Policy Holder,Sedan - All Perils,Sedan,20000 to 29000,0,13041,2,400,4,more than 30,more than 30,2 to 4,5 years,31 to 35,Yes,No,External,1 to 2,no change,1 vehicle,1996,All Perils
+Jul,5,Thursday,Honda,Urban,Thursday,Jul,5,Male,Married,41,Policy Holder,Sedan - Liability,Sport,30000 to 39000,0,1884,5,400,3,more than 30,more than 30,2 to 4,7 years,36 to 40,No,No,External,none,no change,1 vehicle,1994,Liability
+Sep,3,Monday,Chevrolet,Urban,Thursday,Sep,4,Male,Single,43,Policy Holder,Utility - All Perils,Utility,more than 69000,0,1358,13,400,3,more than 30,more than 30,2 to 4,6 years,36 to 40,No,No,External,1 to 2,no change,1 vehicle,1994,All Perils
+Mar,2,Saturday,Toyota,Urban,Friday,Mar,3,Male,Married,42,Policy Holder,Sedan - Liability,Sport,more than 69000,0,2458,15,400,1,more than 30,more than 30,more than 4,more than 7,36 to 40,No,No,External,none,1 year,2 vehicles,1994,Liability
+Jun,4,Tuesday,Honda,Urban,Friday,Jun,4,Male,Married,26,Third Party,Sedan - All Perils,Sedan,20000 to 29000,0,4078,16,400,2,more than 30,more than 30,1,7 years,31 to 35,No,No,External,none,no change,1 vehicle,1994,All Perils
+Aug,2,Thursday,Honda,Urban,Wednesday,Aug,3,Female,Married,23,Third Party,Sedan - Collision,Sedan,20000 to 29000,0,13337,6,400,2,more than 30,more than 30,2 to 4,5 years,26 to 30,No,No,External,none,no change,1 vehicle,1996,Collision
+Jun,3,Monday,Toyota,Urban,Tuesday,Jun,4,Male,Married,46,Policy Holder,Sedan - Liability,Sport,20000 to 29000,0,11816,3,400,2,more than 30,more than 30,2 to 4,7 years,41 to 50,No,No,External,none,no change,1 vehicle,1996,Liability
+Mar,1,Wednesday,Toyota,Urban,Monday,Mar,2,Female,Married,45,Policy Holder,Sedan - All Perils,Sedan,less than 20000,1,1680,4,400,1,more than 30,more than 30,1,7 years,36 to 40,No,No,External,none,no change,1 vehicle,1994,All Perils
+Jul,4,Thursday,Mazda,Urban,Thursday,Jul,4,Male,Married,37,Third Party,Sedan - Liability,Sport,30000 to 39000,0,13503,8,400,4,more than 30,more than 30,2 to 4,more than 7,36 to 40,No,No,External,more than 5,no change,1 vehicle,1996,Liability
+Jul,3,Wednesday,Honda,Urban,Tuesday,Jul,4,Female,Married,28,Third Party,Sedan - Collision,Sedan,20000 to 29000,0,2835,7,400,3,more than 30,more than 30,1,5 years,31 to 35,No,No,External,none,no change,1 vehicle,1994,Collision
+Sep,4,Friday,Toyota,Urban,Monday,Sep,4,Male,Married,53,Policy Holder,Sedan - Liability,Sport,20000 to 29000,0,7864,8,400,2,more than 30,more than 30,2 to 4,7 years,41 to 50,No,No,External,3 to 5,no change,1 vehicle,1995,Liability
+Feb,4,Saturday,Toyota,Urban,Friday,Mar,1,Female,Married,33,Third Party,Sedan - Collision,Sedan,30000 to 39000,0,80,10,400,1,more than 30,more than 30,2 to 4,7 years,31 to 35,No,No,External,more than 5,no change,1 vehicle,1994,Collision
+Jun,1,Friday,Toyota,Urban,Tuesday,Jun,3,Male,Married,61,Policy Holder,Sedan - Collision,Sedan,20000 to 29000,0,217,9,400,2,15 to 30,more than 30,none,more than 7,51 to 65,Yes,No,External,none,no change,1 vehicle,1994,Collision
+Mar,1,Friday,Ford,Rural,Wednesday,Mar,4,Male,Married,41,Third Party,Sedan - Collision,Sedan,40000 to 59000,0,9583,9,400,2,more than 30,more than 30,2 to 4,more than 7,36 to 40,No,No,External,more than 5,no change,1 vehicle,1995,Collision
+Feb,1,Wednesday,Toyota,Urban,Wednesday,Feb,1,Male,Single,43,Policy Holder,Sedan - Liability,Sport,20000 to 29000,0,7947,11,400,2,more than 30,more than 30,none,7 years,36 to 40,No,No,External,3 to 5,no change,1 vehicle,1995,Liability
+Nov,2,Monday,Honda,Urban,Wednesday,Nov,2,Male,Single,16,Third Party,Sport - Collision,Sport,more than 69000,0,1432,15,400,2,more than 30,more than 30,1,2 years,18 to 20,No,Yes,External,none,no change,1 vehicle,1994,Collision
+Jul,2,Thursday,Honda,Urban,Thursday,Jul,4,Male,Married,27,Policy Holder,Sedan - Collision,Sedan,20000 to 29000,0,14529,4,400,2,more than 30,more than 30,2 to 4,5 years,31 to 35,No,No,External,3 to 5,no change,1 vehicle,1996,Collision
+Feb,2,Wednesday,Honda,Urban,Wednesday,Feb,2,Male,Single,0,Policy Holder,Sedan - All Perils,Sedan,more than 69000,0,13984,12,400,3,more than 30,more than 30,1,new,16 to 17,No,No,External,none,no change,1 vehicle,1996,All Perils
+Jul,2,Tuesday,Toyota,Urban,Tuesday,Jul,2,Male,Married,76,Policy Holder,Sedan - Collision,Sedan,30000 to 39000,0,3849,10,400,2,more than 30,more than 30,2 to 4,more than 7,over 65,No,No,External,none,no change,1 vehicle,1994,Collision
+May,2,Saturday,Mazda,Urban,Monday,May,2,Male,Single,21,Policy Holder,Sedan - Collision,Sedan,20000 to 29000,0,5561,1,400,3,more than 30,more than 30,1,5 years,26 to 30,No,No,External,none,no change,1 vehicle,1994,Collision
+May,2,Sunday,Toyota,Urban,Friday,May,2,Female,Married,41,Third Party,Sedan - Collision,Sedan,20000 to 29000,0,903,11,400,3,more than 30,more than 30,1,6 years,36 to 40,No,No,External,none,no change,3 to 4,1994,Collision
+Jul,2,Thursday,Pontiac,Urban,Friday,Aug,1,Male,Married,31,Policy Holder,Sedan - Collision,Sedan,40000 to 59000,0,11458,13,400,3,more than 30,more than 30,none,7 years,31 to 35,No,No,External,none,no change,1 vehicle,1996,Collision
+Feb,2,Monday,Honda,Urban,Monday,Feb,2,Female,Married,52,Policy Holder,Sedan - Liability,Sport,20000 to 29000,0,8497,13,400,3,more than 30,more than 30,more than 4,7 years,41 to 50,No,No,External,none,no change,1 vehicle,1995,Liability
+Nov,4,Friday,Ford,Urban,Saturday,Nov,4,Male,Married,42,Policy Holder,Sedan - Liability,Sport,30000 to 39000,0,9190,16,400,4,more than 30,more than 30,2 to 4,7 years,36 to 40,No,No,External,none,no change,1 vehicle,1995,Liability
+Aug,4,Monday,Honda,Urban,Thursday,Aug,5,Male,Single,21,Policy Holder,Sedan - Collision,Sedan,30000 to 39000,0,2634,16,400,2,more than 30,more than 30,none,5 years,26 to 30,No,No,External,none,no change,1 vehicle,1994,Collision
+Aug,5,Tuesday,Toyota,Urban,Friday,Sep,1,Male,Married,55,Policy Holder,Sedan - Collision,Sedan,20000 to 29000,0,10122,8,400,1,more than 30,more than 30,2 to 4,7 years,41 to 50,No,No,Internal,none,no change,1 vehicle,1995,Collision
+May,3,Friday,Honda,Urban,Wednesday,May,4,Male,Single,0,Policy Holder,Sedan - All Perils,Sedan,more than 69000,0,2360,16,400,1,more than 30,more than 30,1,new,16 to 17,No,No,External,none,no change,1 vehicle,1994,All Perils
+Aug,1,Friday,Toyota,Rural,Tuesday,Aug,2,Male,Married,46,Third Party,Sedan - Liability,Sport,20000 to 29000,0,15168,13,400,4,more than 30,more than 30,2 to 4,more than 7,41 to 50,No,No,External,more than 5,no change,1 vehicle,1996,Liability
+Mar,3,Friday,Pontiac,Urban,Tuesday,May,3,Male,Single,39,Policy Holder,Sedan - Collision,Sedan,less than 20000,0,11617,8,400,1,more than 30,more than 30,more than 4,more than 7,36 to 40,No,No,External,none,no change,1 vehicle,1996,Collision
+Sep,3,Tuesday,Chevrolet,Urban,Thursday,Sep,4,Male,Married,59,Policy Holder,Sedan - Collision,Sedan,40000 to 59000,0,12592,12,400,2,more than 30,more than 30,2 to 4,more than 7,51 to 65,No,No,External,more than 5,no change,1 vehicle,1996,Collision
+Jan,2,Sunday,Toyota,Rural,Thursday,Jan,3,Male,Single,36,Policy Holder,Sedan - All Perils,Sedan,less than 20000,1,509,1,400,4,more than 30,more than 30,none,6 years,36 to 40,No,No,External,none,no change,1 vehicle,1994,All Perils
+Dec,5,Thursday,Mazda,Urban,Monday,Jan,2,Male,Married,61,Policy Holder,Sedan - Collision,Sedan,30000 to 39000,0,13726,9,400,1,more than 30,more than 30,1,more than 7,51 to 65,No,No,External,1 to 2,no change,1 vehicle,1996,Collision
+Sep,2,Wednesday,VW,Urban,Wednesday,Sep,2,Male,Married,53,Policy Holder,Sedan - Liability,Sport,60000 to 69000,0,3538,15,400,1,more than 30,more than 30,2 to 4,more than 7,41 to 50,No,No,External,more than 5,no change,1 vehicle,1994,Liability
+May,4,Tuesday,Honda,Urban,Monday,Aug,4,Female,Single,29,Third Party,Sedan - All Perils,Sedan,20000 to 29000,0,466,11,400,4,more than 30,more than 30,none,6 years,31 to 35,No,No,External,none,no change,1 vehicle,1994,All Perils
+Dec,3,Monday,Saab,Urban,Wednesday,Dec,5,Male,Single,34,Policy Holder,Sedan - All Perils,Sedan,30000 to 39000,1,8704,15,400,2,more than 30,more than 30,2 to 4,6 years,31 to 35,No,No,External,more than 5,no change,1 vehicle,1995,All Perils
+Jun,4,Monday,Honda,Urban,Tuesday,Jul,1,Male,Married,28,Policy Holder,Sedan - Collision,Sedan,30000 to 39000,1,4733,10,400,3,more than 30,more than 30,2 to 4,5 years,31 to 35,No,No,External,more than 5,1 year,1 vehicle,1994,Collision
+Oct,3,Sunday,Honda,Urban,Monday,Oct,3,Male,Married,29,Policy Holder,Sedan - Liability,Sport,20000 to 29000,0,14446,3,400,4,more than 30,more than 30,2 to 4,7 years,31 to 35,No,No,External,more than 5,no change,1 vehicle,1996,Liability
+Aug,2,Friday,Toyota,Urban,Friday,Aug,2,Male,Single,26,Policy Holder,Sedan - Collision,Sedan,20000 to 29000,0,1214,1,400,1,more than 30,more than 30,2 to 4,6 years,31 to 35,No,No,External,1 to 2,no change,1 vehicle,1994,Collision
+Oct,5,Monday,Chevrolet,Urban,Wednesday,Nov,4,Male,Married,33,Policy Holder,Sedan - Liability,Sport,20000 to 29000,0,10924,6,400,2,more than 30,more than 30,more than 4,5 years,31 to 35,No,No,External,none,no change,1 vehicle,1995,Liability
+Mar,5,Tuesday,Accura,Urban,Wednesday,Apr,1,Male,Married,38,Policy Holder,Sedan - Liability,Sport,30000 to 39000,0,2125,11,400,1,more than 30,more than 30,2 to 4,7 years,36 to 40,No,No,External,3 to 5,no change,1 vehicle,1994,Liability
+May,4,Monday,Mazda,Urban,Monday,May,4,Male,Single,43,Policy Holder,Sedan - Liability,Sport,30000 to 39000,0,13283,8,400,3,more than 30,more than 30,more than 4,7 years,36 to 40,No,No,External,more than 5,no change,1 vehicle,1996,Liability
+Oct,4,Saturday,Toyota,Urban,Monday,Oct,4,Male,Single,31,Policy Holder,Sedan - All Perils,Sedan,less than 20000,0,6629,16,400,4,more than 30,more than 30,none,7 years,31 to 35,No,No,External,none,no change,1 vehicle,1995,All Perils
+May,5,Sunday,Mazda,Urban,Wednesday,Jun,4,Male,Married,48,Third Party,Sedan - Collision,Sedan,20000 to 29000,0,12555,2,400,4,more than 30,more than 30,1,more than 7,41 to 50,Yes,No,External,none,no change,1 vehicle,1996,Collision
+Aug,4,Monday,Toyota,Urban,Friday,Aug,4,Male,Married,26,Third Party,Sedan - Collision,Sedan,30000 to 39000,0,7098,3,400,1,more than 30,more than 30,none,7 years,31 to 35,No,No,External,more than 5,no change,1 vehicle,1995,Collision
+Aug,2,Friday,Chevrolet,Rural,Thursday,Aug,4,Male,Married,28,Third Party,Utility - All Perils,Utility,more than 69000,0,1384,1,400,3,more than 30,more than 30,more than 4,7 years,31 to 35,No,No,External,3 to 5,no change,1 vehicle,1994,All Perils
+Dec,1,Sunday,Toyota,Urban,Monday,Dec,1,Male,Married,59,Policy Holder,Sedan - Collision,Sedan,less than 20000,0,9480,7,400,4,more than 30,more than 30,none,more than 7,51 to 65,No,No,External,1 to 2,no change,1 vehicle,1995,Collision
+Aug,1,Saturday,Honda,Urban,Thursday,Aug,2,Male,Married,55,Third Party,Sedan - Liability,Sport,30000 to 39000,0,11247,4,400,1,more than 30,more than 30,1,more than 7,41 to 50,No,No,External,more than 5,no change,1 vehicle,1995,Liability
+Oct,3,Sunday,Honda,Urban,Monday,Oct,3,Male,Married,62,Third Party,Sedan - Collision,Sedan,20000 to 29000,0,11311,7,400,1,more than 30,more than 30,none,7 years,51 to 65,No,No,External,1 to 2,no change,1 vehicle,1995,Collision
+Feb,3,Sunday,Pontiac,Rural,Wednesday,Mar,1,Male,Married,54,Policy Holder,Sedan - All Perils,Sedan,less than 20000,1,1425,4,400,4,more than 30,more than 30,2 to 4,more than 7,41 to 50,No,No,External,none,no change,1 vehicle,1994,All Perils
+Aug,2,Wednesday,Pontiac,Urban,Friday,Nov,2,Female,Single,29,Policy Holder,Sedan - Collision,Sedan,20000 to 29000,0,10145,11,400,4,more than 30,more than 30,none,6 years,31 to 35,No,No,External,none,no change,1 vehicle,1995,Collision
+Jul,4,Wednesday,Chevrolet,Urban,Thursday,Jul,4,Male,Married,55,Policy Holder,Sedan - Liability,Sport,20000 to 29000,0,4321,8,400,4,more than 30,more than 30,1,more than 7,41 to 50,No,No,External,3 to 5,no change,1 vehicle,1994,Liability
+Nov,1,Saturday,Pontiac,Rural,Tuesday,Nov,2,Male,Married,42,Policy Holder,Sedan - Collision,Sedan,20000 to 29000,0,4772,12,400,3,more than 30,more than 30,1,more than 7,36 to 40,No,No,External,more than 5,no change,1 vehicle,1994,Collision
+Jan,1,Friday,Pontiac,Urban,Monday,Jan,2,Male,Married,51,Third Party,Sedan - All Perils,Sedan,30000 to 39000,0,8740,13,400,1,more than 30,more than 30,2 to 4,6 years,41 to 50,No,No,External,none,no change,1 vehicle,1995,All Perils
+Jul,4,Thursday,Pontiac,Urban,Friday,Jul,4,Male,Married,52,Policy Holder,Sedan - Liability,Sport,30000 to 39000,0,5731,1,400,2,more than 30,more than 30,2 to 4,more than 7,41 to 50,No,No,External,3 to 5,no change,1 vehicle,1994,Liability
+Oct,4,Monday,Chevrolet,Urban,Monday,Oct,4,Female,Single,34,Policy Holder,Sedan - Liability,Sport,30000 to 39000,0,12635,7,400,3,more than 30,more than 30,none,6 years,31 to 35,No,No,External,none,no change,1 vehicle,1996,Liability
+Oct,2,Friday,Ford,Urban,Friday,Oct,3,Male,Married,53,Third Party,Sedan - All Perils,Sedan,40000 to 59000,0,10573,3,400,2,more than 30,more than 30,1,more than 7,41 to 50,No,No,External,none,no change,1 vehicle,1995,All Perils
+Jan,1,Thursday,Toyota,Urban,Tuesday,Mar,4,Male,Married,46,Policy Holder,Sedan - Liability,Sport,20000 to 29000,0,2525,9,400,4,more than 30,more than 30,2 to 4,more than 7,41 to 50,No,No,External,none,no change,1 vehicle,1994,Liability
+Oct,1,Thursday,Ford,Urban,Friday,Oct,2,Male,Married,55,Third Party,Sedan - Collision,Sedan,more than 69000,0,1595,5,400,4,more than 30,more than 30,2 to 4,more than 7,41 to 50,No,No,External,more than 5,no change,1 vehicle,1994,Collision
+Nov,1,Wednesday,Chevrolet,Rural,Thursday,Dec,3,Female,Married,45,Policy Holder,Sedan - All Perils,Sedan,20000 to 29000,0,14341,12,400,2,more than 30,more than 30,1,7 years,36 to 40,No,No,External,1 to 2,no change,1 vehicle,1996,All Perils
+Jul,3,Saturday,Pontiac,Urban,Tuesday,Jul,3,Male,Married,34,Third Party,Sedan - Liability,Sport,20000 to 29000,0,9592,4,400,1,more than 30,more than 30,more than 4,6 years,31 to 35,No,No,External,3 to 5,no change,1 vehicle,1995,Liability
+Jan,2,Tuesday,Toyota,Rural,Wednesday,Jan,2,Male,Married,27,Policy Holder,Sedan - All Perils,Sedan,more than 69000,0,7096,14,400,3,more than 30,more than 30,1,6 years,31 to 35,No,No,External,more than 5,no change,1 vehicle,1995,All Perils
+Nov,2,Thursday,Toyota,Urban,Thursday,Nov,2,Female,Married,26,Policy Holder,Sedan - Liability,Sport,30000 to 39000,0,14205,16,400,2,more than 30,more than 30,1,5 years,31 to 35,Yes,No,External,none,no change,1 vehicle,1996,Liability
+Aug,1,Wednesday,Toyota,Urban,Thursday,Aug,1,Male,Married,55,Policy Holder,Sedan - Liability,Sport,30000 to 39000,0,8228,13,400,3,more than 30,more than 30,more than 4,more than 7,41 to 50,No,No,External,none,no change,1 vehicle,1995,Liability
+Feb,2,Wednesday,Pontiac,Urban,Friday,Feb,3,Male,Married,51,Third Party,Sedan - All Perils,Sedan,20000 to 29000,0,533,1,400,4,more than 30,more than 30,none,more than 7,41 to 50,No,No,External,none,no change,1 vehicle,1994,All Perils
+Nov,3,Thursday,Honda,Urban,Tuesday,Nov,4,Female,Married,40,Third Party,Sedan - All Perils,Sedan,20000 to 29000,0,11622,12,400,3,more than 30,more than 30,none,7 years,36 to 40,No,No,External,none,no change,1 vehicle,1996,All Perils
+Mar,4,Friday,Pontiac,Urban,Wednesday,Apr,2,Male,Single,45,Third Party,Sedan - Liability,Sport,20000 to 29000,0,1577,1,400,4,more than 30,more than 30,2 to 4,5 years,36 to 40,No,No,External,none,no change,1 vehicle,1994,Liability
+Sep,5,Thursday,Pontiac,Urban,Tuesday,Oct,1,Male,Married,41,Policy Holder,Sedan - Collision,Sedan,30000 to 39000,0,10008,14,400,4,more than 30,more than 30,1,more than 7,36 to 40,No,No,External,none,no change,1 vehicle,1995,Collision
+Jul,1,Wednesday,Pontiac,Urban,Tuesday,Jul,2,Male,Married,30,Third Party,Sedan - Collision,Sedan,20000 to 29000,0,1219,15,400,1,more than 30,more than 30,2 to 4,6 years,31 to 35,No,No,External,none,4 to 8 years,2 vehicles,1994,Collision
+Apr,1,Saturday,Chevrolet,Urban,Monday,Apr,1,Male,Married,32,Policy Holder,Sedan - All Perils,Sedan,30000 to 39000,0,12795,11,400,4,more than 30,more than 30,more than 4,7 years,31 to 35,No,No,External,none,no change,1 vehicle,1996,All Perils
+Jul,3,Thursday,Honda,Urban,Tuesday,Jul,3,Male,Single,31,Policy Holder,Sedan - Liability,Sport,30000 to 39000,0,7761,10,400,4,more than 30,more than 30,2 to 4,6 years,31 to 35,No,No,External,none,no change,1 vehicle,1995,Liability
+Aug,1,Saturday,Mazda,Urban,Thursday,Aug,3,Male,Married,29,Third Party,Sport - Collision,Sport,more than 69000,0,13932,5,400,3,more than 30,more than 30,2 to 4,7 years,31 to 35,Yes,No,External,none,no change,1 vehicle,1996,Collision
+Jun,2,Saturday,Chevrolet,Urban,Monday,Jun,2,Female,Married,30,Third Party,Sedan - Collision,Sedan,20000 to 29000,0,4037,16,400,2,more than 30,more than 30,2 to 4,7 years,31 to 35,No,No,External,more than 5,no change,1 vehicle,1994,Collision
+Sep,3,Thursday,Ford,Rural,Thursday,Sep,4,Male,Married,55,Third Party,Sedan - Collision,Sedan,30000 to 39000,0,6412,2,400,2,more than 30,more than 30,2 to 4,7 years,41 to 50,No,No,External,none,no change,1 vehicle,1995,Collision
+Jun,1,Sunday,Chevrolet,Urban,Wednesday,Jun,2,Male,Married,43,Policy Holder,Sedan - Liability,Sport,20000 to 29000,0,15159,6,400,1,more than 30,more than 30,2 to 4,4 years,36 to 40,Yes,No,External,1 to 2,no change,1 vehicle,1996,Liability
+Mar,3,Thursday,Chevrolet,Rural,Thursday,Mar,3,Male,Married,44,Third Party,Sedan - All Perils,Sedan,20000 to 29000,0,8595,9,400,1,more than 30,more than 30,none,7 years,36 to 40,No,No,External,none,no change,1 vehicle,1995,All Perils
+Jul,2,Tuesday,Honda,Urban,Tuesday,Feb,2,Male,Married,58,Policy Holder,Sedan - Collision,Sedan,20000 to 29000,0,8660,13,400,1,more than 30,more than 30,1,more than 7,51 to 65,No,No,External,3 to 5,no change,1 vehicle,1995,Collision
+May,3,Tuesday,Honda,Urban,Thursday,May,3,Male,Single,19,Policy Holder,Sedan - Collision,Sedan,20000 to 29000,0,2361,3,400,3,more than 30,more than 30,2 to 4,4 years,21 to 25,No,No,External,more than 5,no change,1 vehicle,1994,Collision
+Jun,2,Wednesday,Toyota,Urban,Friday,Jun,2,Male,Married,62,Policy Holder,Sedan - Collision,Sedan,less than 20000,0,14695,7,400,4,more than 30,more than 30,1,6 years,51 to 65,No,No,External,3 to 5,no change,1 vehicle,1996,Collision
+Jul,5,Monday,Pontiac,Rural,Monday,Jul,5,Female,Single,54,Policy Holder,Sedan - Liability,Sport,20000 to 29000,0,14960,16,400,1,more than 30,more than 30,2 to 4,7 years,41 to 50,No,No,External,more than 5,no change,1 vehicle,1996,Liability
+Feb,2,Wednesday,Mazda,Urban,Thursday,Feb,2,Male,Single,34,Third Party,Sedan - Collision,Sedan,30000 to 39000,0,3693,14,400,4,more than 30,more than 30,2 to 4,6 years,31 to 35,No,No,External,more than 5,no change,5 to 8,1994,Collision
+Dec,4,Monday,Honda,Urban,Wednesday,Jan,1,Male,Single,26,Third Party,Sedan - All Perils,Sedan,more than 69000,0,8849,11,400,3,more than 30,more than 30,more than 4,6 years,31 to 35,No,No,External,1 to 2,no change,1 vehicle,1995,All Perils
+Oct,3,Saturday,Toyota,Urban,Monday,Oct,4,Male,Married,64,Third Party,Sedan - Collision,Sedan,20000 to 29000,0,12688,13,400,1,more than 30,more than 30,2 to 4,more than 7,51 to 65,No,No,External,1 to 2,no change,1 vehicle,1996,Collision
+May,5,Tuesday,Toyota,Urban,Tuesday,May,5,Male,Single,30,Policy Holder,Sedan - Collision,Sedan,30000 to 39000,0,1977,3,400,2,more than 30,more than 30,none,6 years,31 to 35,No,No,External,none,no change,1 vehicle,1994,Collision
+Oct,2,Thursday,Pontiac,Urban,Wednesday,Oct,3,Male,Married,38,Policy Holder,Sedan - Collision,Sedan,20000 to 29000,0,7669,14,400,4,more than 30,more than 30,1,4 years,36 to 40,No,No,External,none,no change,1 vehicle,1995,Collision
+Mar,4,Saturday,Pontiac,Urban,Friday,Apr,1,Male,Married,27,Third Party,Sedan - All Perils,Sedan,20000 to 29000,0,2257,5,400,4,more than 30,more than 30,1,6 years,31 to 35,No,No,External,3 to 5,no change,1 vehicle,1994,All Perils
+May,5,Saturday,Chevrolet,Urban,Tuesday,Jun,3,Male,Married,60,Third Party,Sedan - All Perils,Sedan,20000 to 29000,0,4081,14,500,1,more than 30,more than 30,1,more than 7,51 to 65,No,No,External,none,2 to 3 years,1 vehicle,1994,All Perils
+Apr,2,Tuesday,Toyota,Urban,Friday,Apr,4,Male,Married,62,Policy Holder,Sedan - All Perils,Sedan,more than 69000,0,9353,7,400,2,more than 30,more than 30,2 to 4,more than 7,51 to 65,No,No,External,3 to 5,no change,1 vehicle,1995,All Perils
+Jun,1,Thursday,Pontiac,Urban,Thursday,Jun,1,Male,Single,34,Policy Holder,Sedan - Liability,Sport,30000 to 39000,0,402,15,400,2,more than 30,more than 30,more than 4,7 years,31 to 35,No,No,External,none,no change,1 vehicle,1994,Liability
+Sep,2,Thursday,Pontiac,Urban,Monday,Sep,2,Male,Married,39,Policy Holder,Sedan - Collision,Sedan,30000 to 39000,0,12807,13,400,1,more than 30,more than 30,none,more than 7,36 to 40,No,No,External,1 to 2,no change,1 vehicle,1996,Collision
+Jan,2,Saturday,Chevrolet,Urban,Tuesday,Jan,2,Male,Married,41,Policy Holder,Sedan - Liability,Sport,40000 to 59000,0,10364,6,400,1,more than 30,more than 30,1,7 years,36 to 40,No,No,External,more than 5,no change,1 vehicle,1995,Liability
+Apr,4,Tuesday,Toyota,Urban,Tuesday,Apr,4,Male,Married,32,Policy Holder,Sedan - Collision,Sedan,20000 to 29000,0,780,10,400,4,more than 30,more than 30,1,7 years,31 to 35,No,No,External,3 to 5,no change,3 to 4,1994,Collision
+Jan,4,Friday,Pontiac,Urban,Friday,Jan,4,Male,Single,23,Policy Holder,Sedan - Liability,Sport,20000 to 29000,0,11954,9,400,2,more than 30,more than 30,2 to 4,5 years,26 to 30,No,No,External,more than 5,no change,1 vehicle,1996,Liability
+Dec,1,Sunday,Pontiac,Urban,Friday,Dec,3,Male,Married,31,Policy Holder,Sedan - Collision,Sedan,30000 to 39000,1,8378,1,400,2,more than 30,more than 30,2 to 4,7 years,31 to 35,No,No,External,1 to 2,no change,1 vehicle,1995,Collision
+May,1,Sunday,Honda,Rural,Tuesday,May,1,Male,Married,38,Policy Holder,Sedan - Liability,Sport,30000 to 39000,0,9266,5,400,2,more than 30,more than 30,2 to 4,7 years,36 to 40,No,No,External,more than 5,no change,1 vehicle,1995,Liability
+Oct,4,Monday,Pontiac,Urban,Monday,Oct,4,Male,Married,37,Policy Holder,Sedan - Liability,Sport,30000 to 39000,0,7993,4,400,2,more than 30,more than 30,more than 4,7 years,36 to 40,No,No,External,more than 5,no change,1 vehicle,1995,Liability
+Oct,4,Tuesday,Toyota,Urban,Wednesday,Oct,4,Male,Married,31,Policy Holder,Sedan - Liability,Sport,20000 to 29000,0,976,4,400,1,more than 30,more than 30,none,5 years,31 to 35,No,No,External,3 to 5,no change,1 vehicle,1994,Liability
+Nov,3,Tuesday,Chevrolet,Urban,Monday,Nov,4,Male,Single,26,Policy Holder,Sedan - Liability,Sport,20000 to 29000,0,14473,5,400,2,more than 30,more than 30,2 to 4,6 years,31 to 35,No,No,External,3 to 5,no change,1 vehicle,1996,Liability
+Feb,1,Thursday,Honda,Urban,Monday,Feb,1,Male,Single,21,Policy Holder,Sedan - Collision,Sedan,20000 to 29000,0,8596,7,400,1,more than 30,more than 30,1,5 years,26 to 30,No,No,External,1 to 2,no change,1 vehicle,1995,Collision
+Nov,1,Thursday,Toyota,Urban,Monday,Dec,2,Male,Married,47,Third Party,Sedan - Collision,Sedan,20000 to 29000,0,926,14,400,2,more than 30,more than 30,2 to 4,7 years,41 to 50,No,No,External,1 to 2,no change,1 vehicle,1994,Collision
+Nov,3,Monday,Pontiac,Rural,Thursday,Nov,4,Male,Married,63,Policy Holder,Sedan - All Perils,Sedan,20000 to 29000,0,11251,15,400,2,more than 30,more than 30,2 to 4,more than 7,51 to 65,No,No,External,more than 5,no change,1 vehicle,1995,All Perils
+Oct,1,Thursday,Pontiac,Urban,Tuesday,Oct,2,Male,Single,30,Policy Holder,Sedan - Liability,Sport,20000 to 29000,0,10074,12,400,3,more than 30,more than 30,2 to 4,6 years,31 to 35,No,No,External,more than 5,no change,1 vehicle,1995,Liability
+May,1,Friday,Chevrolet,Urban,Friday,May,3,Female,Married,63,Policy Holder,Sedan - All Perils,Sedan,more than 69000,0,3737,4,400,4,more than 30,more than 30,none,5 years,51 to 65,No,No,External,none,no change,1 vehicle,1994,All Perils
+Apr,1,Thursday,Mazda,Urban,Wednesday,Apr,3,Male,Single,27,Policy Holder,Sedan - Collision,Sedan,30000 to 39000,0,8819,12,400,3,more than 30,more than 30,2 to 4,7 years,31 to 35,No,No,External,3 to 5,no change,1 vehicle,1995,Collision
+May,4,Saturday,Chevrolet,Urban,Wednesday,May,5,Male,Single,35,Policy Holder,Sedan - Collision,Sedan,20000 to 29000,1,12519,9,400,3,more than 30,more than 30,1,6 years,31 to 35,No,No,External,none,no change,1 vehicle,1996,Collision
+Jan,4,Monday,Mazda,Urban,Tuesday,Jan,4,Male,Married,36,Third Party,Sedan - Collision,Sedan,20000 to 29000,0,10076,9,700,1,more than 30,more than 30,2 to 4,7 years,36 to 40,No,No,External,more than 5,no change,1 vehicle,1995,Collision
+May,1,Sunday,Mazda,Urban,Thursday,May,1,Male,Married,77,Policy Holder,Sedan - Collision,Sedan,20000 to 29000,0,11678,16,400,3,more than 30,more than 30,none,more than 7,over 65,No,No,External,none,no change,1 vehicle,1996,Collision
+Apr,4,Saturday,Toyota,Urban,Monday,Apr,4,Male,Married,31,Third Party,Sedan - All Perils,Sedan,less than 20000,0,11739,6,400,4,more than 30,more than 30,1,6 years,31 to 35,Yes,No,External,none,no change,1 vehicle,1996,All Perils
+Jun,2,Friday,Chevrolet,Urban,Wednesday,Jun,3,Male,Married,31,Policy Holder,Utility - All Perils,Utility,more than 69000,0,5033,5,400,4,more than 30,more than 30,1,6 years,31 to 35,No,No,External,3 to 5,no change,1 vehicle,1994,All Perils
+Nov,1,Thursday,Toyota,Urban,Friday,Nov,4,Male,Married,34,Policy Holder,Sedan - Collision,Sedan,20000 to 29000,0,4245,8,400,2,more than 30,more than 30,2 to 4,7 years,31 to 35,No,No,External,1 to 2,no change,1 vehicle,1994,Collision
+Aug,1,Tuesday,Chevrolet,Urban,Tuesday,Aug,1,Male,Single,31,Policy Holder,Sedan - Collision,Sedan,30000 to 39000,0,860,2,400,1,more than 30,more than 30,1,6 years,31 to 35,No,No,External,more than 5,no change,1 vehicle,1994,Collision
+Feb,3,Sunday,Honda,Urban,Tuesday,Feb,4,Male,Married,50,Policy Holder,Sedan - Collision,Sedan,20000 to 29000,0,7103,15,400,3,more than 30,more than 30,2 to 4,7 years,41 to 50,No,No,External,none,no change,1 vehicle,1995,Collision
+Mar,4,Tuesday,Mazda,Urban,Friday,Mar,4,Male,Single,34,Third Party,Sedan - Collision,Sedan,30000 to 39000,0,7306,7,400,4,15 to 30,more than 30,2 to 4,5 years,31 to 35,No,No,External,none,no change,1 vehicle,1995,Collision
+Jul,4,Friday,Toyota,Urban,Wednesday,Aug,1,Male,Married,35,Third Party,Sedan - Collision,Sedan,20000 to 29000,0,11947,1,400,1,more than 30,more than 30,1,6 years,31 to 35,No,No,External,3 to 5,no change,1 vehicle,1996,Collision
+Dec,4,Friday,Mazda,Urban,Monday,Dec,4,Male,Married,43,Policy Holder,Sedan - Collision,Sedan,30000 to 39000,0,12022,6,400,4,more than 30,more than 30,2 to 4,7 years,36 to 40,No,No,External,1 to 2,no change,1 vehicle,1996,Collision
+Aug,4,Thursday,Mazda,Urban,Friday,Sep,1,Male,Single,26,Third Party,Sedan - All Perils,Sedan,20000 to 29000,0,5911,11,400,4,more than 30,more than 30,2 to 4,4 years,31 to 35,No,No,External,none,no change,1 vehicle,1994,All Perils
+Aug,2,Friday,Mazda,Rural,Friday,Aug,3,Male,Married,52,Policy Holder,Sedan - Collision,Sedan,30000 to 39000,0,7828,2,400,2,more than 30,more than 30,1,more than 7,41 to 50,No,No,External,more than 5,no change,1 vehicle,1995,Collision
+Sep,3,Tuesday,Toyota,Urban,Friday,Sep,4,Female,Married,50,Policy Holder,Sedan - Liability,Sport,30000 to 39000,0,11769,5,400,3,more than 30,more than 30,1,6 years,41 to 50,No,No,External,none,no change,1 vehicle,1996,Liability
+Dec,1,Friday,Toyota,Urban,Friday,Dec,1,Male,Married,32,Policy Holder,Sedan - Collision,Sedan,20000 to 29000,0,4019,1,400,4,more than 30,more than 30,none,6 years,31 to 35,No,No,External,none,no change,3 to 4,1994,Collision
+Jun,4,Wednesday,Chevrolet,Urban,Tuesday,Jun,4,Male,Married,36,Third Party,Sedan - All Perils,Sedan,30000 to 39000,0,15247,11,400,1,more than 30,more than 30,2 to 4,5 years,36 to 40,No,No,External,none,4 to 8 years,2 vehicles,1996,All Perils
+Jun,3,Monday,Pontiac,Urban,Monday,Jun,3,Male,Married,35,Policy Holder,Sedan - Collision,Sedan,20000 to 29000,0,7488,2,400,1,more than 30,more than 30,none,6 years,31 to 35,No,No,External,none,no change,1 vehicle,1995,Collision
+Aug,4,Tuesday,Pontiac,Urban,Wednesday,Sep,2,Male,Single,35,Policy Holder,Sedan - Liability,Sport,30000 to 39000,0,9408,7,400,1,more than 30,more than 30,none,6 years,31 to 35,No,No,External,none,no change,1 vehicle,1995,Liability
+Jun,3,Friday,Toyota,Urban,Wednesday,Jul,1,Male,Married,54,Third Party,Sedan - Liability,Sport,20000 to 29000,0,7874,15,400,1,more than 30,more than 30,1,more than 7,41 to 50,No,No,External,more than 5,no change,1 vehicle,1995,Liability
+Jul,1,Wednesday,Toyota,Urban,Thursday,Jul,2,Male,Married,33,Third Party,Sedan - Collision,Sedan,20000 to 29000,0,13323,14,400,2,more than 30,more than 30,1,6 years,31 to 35,No,No,External,none,no change,1 vehicle,1996,Collision
+Feb,1,Sunday,Pontiac,Urban,Thursday,Feb,2,Male,Married,77,Policy Holder,Sedan - Liability,Sport,20000 to 29000,0,15255,5,400,2,more than 30,more than 30,none,more than 7,over 65,No,No,External,none,no change,1 vehicle,1996,Liability
+Feb,3,Saturday,Pontiac,Urban,Sunday,Feb,3,Male,Married,48,Third Party,Sedan - Liability,Sport,30000 to 39000,0,10779,15,400,3,more than 30,more than 30,1,more than 7,41 to 50,No,No,External,more than 5,no change,1 vehicle,1995,Liability
+Jan,4,Saturday,Toyota,Rural,Tuesday,Jan,4,Male,Married,50,Policy Holder,Sedan - Collision,Sedan,20000 to 29000,0,15364,9,400,4,more than 30,more than 30,none,more than 7,41 to 50,No,No,External,none,no change,1 vehicle,1996,Collision
+Jul,5,Sunday,Pontiac,Urban,Monday,Jul,5,Male,Married,65,Policy Holder,Sedan - Liability,Sport,20000 to 29000,0,10903,6,400,2,more than 30,more than 30,2 to 4,7 years,51 to 65,No,No,External,3 to 5,no change,1 vehicle,1995,Liability
+Dec,3,Tuesday,Pontiac,Urban,Wednesday,Dec,3,Male,Married,29,Policy Holder,Sedan - Collision,Sedan,20000 to 29000,0,13190,16,400,1,more than 30,more than 30,1,7 years,31 to 35,No,No,External,1 to 2,no change,1 vehicle,1996,Collision
+Mar,4,Monday,VW,Urban,Thursday,Mar,5,Male,Married,56,Policy Holder,Sedan - All Perils,Sedan,more than 69000,0,967,16,400,2,more than 30,more than 30,1,more than 7,51 to 65,No,No,External,none,4 to 8 years,2 vehicles,1994,All Perils
+Sep,4,Saturday,Mazda,Urban,Tuesday,Sep,4,Male,Single,32,Third Party,Sedan - Liability,Sport,30000 to 39000,0,5743,7,400,3,more than 30,more than 30,1,6 years,31 to 35,No,No,External,none,no change,1 vehicle,1994,Liability
+Apr,4,Saturday,Pontiac,Urban,Tuesday,May,1,Male,Married,64,Policy Holder,Sedan - Collision,Sedan,20000 to 29000,0,206,15,400,3,more than 30,more than 30,1,more than 7,51 to 65,No,No,External,none,no change,3 to 4,1994,Collision
+Jul,1,Friday,Accura,Urban,Tuesday,Jul,2,Female,Divorced,45,Policy Holder,Sedan - Liability,Sport,30000 to 39000,0,4454,1,400,1,more than 30,more than 30,2 to 4,7 years,36 to 40,No,No,External,more than 5,no change,1 vehicle,1994,Liability
+Oct,1,Tuesday,Pontiac,Urban,Thursday,Oct,1,Male,Married,33,Third Party,Sedan - Collision,Sedan,20000 to 29000,0,2712,8,400,4,more than 30,more than 30,none,5 years,31 to 35,No,No,External,none,no change,1 vehicle,1994,Collision
+Apr,2,Saturday,Mazda,Urban,Monday,Apr,2,Male,Single,22,Third Party,Sport - Collision,Sport,more than 69000,0,4109,8,400,1,more than 30,more than 30,2 to 4,3 years,26 to 30,No,No,External,none,no change,1 vehicle,1994,Collision
+Dec,2,Wednesday,Mazda,Urban,Wednesday,Dec,2,Male,Married,32,Third Party,Sedan - All Perils,Sedan,20000 to 29000,0,9729,1,400,4,more than 30,more than 30,none,6 years,31 to 35,No,No,External,3 to 5,no change,1 vehicle,1995,All Perils
+Dec,3,Wednesday,Toyota,Urban,Thursday,Dec,3,Male,Married,43,Policy Holder,Sedan - Collision,Sedan,20000 to 29000,0,9586,7,400,1,more than 30,more than 30,1,6 years,36 to 40,No,No,External,3 to 5,no change,1 vehicle,1995,Collision
+Oct,3,Friday,Pontiac,Urban,Friday,Oct,3,Male,Married,65,Policy Holder,Utility - All Perils,Utility,40000 to 59000,0,14428,2,400,1,more than 30,more than 30,1,more than 7,51 to 65,No,No,External,more than 5,4 to 8 years,2 vehicles,1996,All Perils
+Nov,2,Wednesday,Pontiac,Urban,Wednesday,Nov,2,Male,Married,63,Policy Holder,Sedan - Liability,Sport,30000 to 39000,0,1370,7,400,3,more than 30,more than 30,more than 4,7 years,51 to 65,No,No,External,none,no change,1 vehicle,1994,Liability
+May,3,Saturday,Mazda,Urban,Tuesday,May,4,Female,Married,48,Policy Holder,Sedan - Liability,Sport,20000 to 29000,0,698,16,400,4,more than 30,more than 30,none,7 years,41 to 50,No,No,External,none,no change,3 to 4,1994,Liability
+Jan,5,Friday,Mazda,Urban,Tuesday,Feb,3,Male,Single,37,Policy Holder,Sedan - Liability,Sport,20000 to 29000,0,467,11,400,2,more than 30,more than 30,2 to 4,7 years,36 to 40,No,No,External,3 to 5,no change,1 vehicle,1994,Liability
+Jul,4,Friday,Pontiac,Urban,Tuesday,Aug,2,Male,Married,57,Policy Holder,Utility - Collision,Utility,more than 69000,0,12256,5,400,1,more than 30,more than 30,2 to 4,more than 7,51 to 65,No,No,External,more than 5,no change,1 vehicle,1996,Collision
+Oct,1,Tuesday,VW,Urban,Friday,Oct,1,Male,Widow,41,Policy Holder,Sedan - Collision,Sedan,60000 to 69000,1,14877,6,400,4,more than 30,more than 30,2 to 4,more than 7,36 to 40,No,No,Internal,none,no change,1 vehicle,1996,Collision
+Jul,2,Monday,Accura,Urban,Tuesday,Jul,2,Male,Single,51,Policy Holder,Sedan - All Perils,Sedan,more than 69000,0,15227,14,400,1,more than 30,more than 30,1,more than 7,41 to 50,No,No,External,more than 5,no change,1 vehicle,1996,All Perils
+Jul,1,Monday,Pontiac,Urban,Thursday,Jul,1,Male,Married,54,Policy Holder,Sedan - All Perils,Sedan,less than 20000,1,13313,3,400,4,more than 30,more than 30,2 to 4,more than 7,41 to 50,No,No,External,3 to 5,no change,1 vehicle,1996,All Perils
+Aug,1,Saturday,Mazda,Urban,Tuesday,Aug,2,Male,Single,21,Policy Holder,Sedan - Collision,Sedan,20000 to 29000,0,2506,9,400,1,more than 30,more than 30,1,6 years,26 to 30,No,No,External,more than 5,no change,1 vehicle,1994,Collision
+Oct,5,Monday,Mazda,Urban,Friday,Nov,1,Female,Married,29,Policy Holder,Sedan - Liability,Sport,20000 to 29000,0,8355,1,400,1,more than 30,more than 30,2 to 4,7 years,31 to 35,No,No,External,none,no change,1 vehicle,1995,Liability
+Jan,2,Thursday,Honda,Urban,Friday,Jan,4,Male,Married,46,Policy Holder,Sedan - All Perils,Sedan,less than 20000,0,1627,8,400,4,more than 30,more than 30,more than 4,7 years,41 to 50,Yes,No,External,none,no change,1 vehicle,1994,All Perils
+Oct,5,Saturday,Toyota,Urban,Monday,Jan,3,Male,Married,37,Policy Holder,Sedan - Collision,Sedan,30000 to 39000,0,11725,8,400,3,more than 30,more than 30,2 to 4,5 years,36 to 40,No,No,External,more than 5,no change,1 vehicle,1996,Collision
+Mar,5,Wednesday,Ford,Urban,Friday,Mar,5,Female,Married,38,Third Party,Sedan - Liability,Sport,60000 to 69000,0,8370,5,400,4,more than 30,more than 30,2 to 4,7 years,36 to 40,No,No,External,more than 5,no change,1 vehicle,1995,Liability
+Sep,4,Saturday,Pontiac,Urban,Thursday,Oct,4,Male,Married,42,Third Party,Sedan - Collision,Sedan,less than 20000,0,4453,2,400,1,more than 30,more than 30,none,more than 7,36 to 40,No,No,External,3 to 5,4 to 8 years,2 vehicles,1994,Collision
+Sep,1,Saturday,Accura,Urban,Wednesday,Oct,1,Male,Married,41,Policy Holder,Sedan - Liability,Sport,more than 69000,0,10051,3,400,1,more than 30,more than 30,2 to 4,more than 7,36 to 40,No,No,External,more than 5,no change,1 vehicle,1995,Liability
+Apr,1,Sunday,Honda,Urban,Monday,Apr,3,Male,Single,0,Policy Holder,Sedan - Liability,Sport,more than 69000,0,1531,13,400,2,more than 30,more than 30,2 to 4,new,16 to 17,No,No,External,none,2 to 3 years,1 vehicle,1994,Liability
+Mar,3,Saturday,Chevrolet,Urban,Friday,Apr,1,Male,Single,49,Policy Holder,Sedan - All Perils,Sedan,more than 69000,0,5654,9,400,3,more than 30,more than 30,1,more than 7,41 to 50,No,No,External,more than 5,no change,1 vehicle,1994,All Perils
+Oct,1,Thursday,Toyota,Urban,Thursday,Oct,2,Male,Married,48,Policy Holder,Sedan - Collision,Sedan,30000 to 39000,0,5021,3,400,2,more than 30,more than 30,2 to 4,6 years,41 to 50,No,No,External,none,no change,1 vehicle,1994,Collision
+Jun,4,Tuesday,Pontiac,Rural,Friday,Jul,5,Male,Married,33,Policy Holder,Sedan - All Perils,Sedan,20000 to 29000,0,11479,13,400,1,more than 30,more than 30,none,6 years,31 to 35,No,No,External,none,no change,1 vehicle,1996,All Perils
+Nov,3,Wednesday,Honda,Urban,Monday,Nov,3,Male,Married,32,Policy Holder,Sedan - Liability,Sport,20000 to 29000,0,12667,12,400,2,more than 30,more than 30,none,6 years,31 to 35,No,No,Internal,none,no change,1 vehicle,1996,Liability
+Jan,2,Monday,Toyota,Urban,Thursday,Feb,2,Male,Married,68,Policy Holder,Sedan - Collision,Sedan,less than 20000,0,3564,10,400,2,more than 30,more than 30,none,more than 7,over 65,No,No,External,none,no change,1 vehicle,1994,Collision
+Apr,3,Wednesday,Toyota,Urban,Thursday,Apr,5,Male,Married,50,Policy Holder,Sedan - Liability,Sport,40000 to 59000,0,14394,16,400,4,more than 30,more than 30,more than 4,more than 7,41 to 50,No,No,External,none,no change,1 vehicle,1996,Liability
+Apr,4,Thursday,Ford,Urban,Wednesday,May,1,Male,Married,41,Policy Holder,Sedan - All Perils,Sedan,more than 69000,0,17,15,400,4,more than 30,more than 30,none,7 years,36 to 40,No,No,External,none,no change,1 vehicle,1994,All Perils
+Apr,5,Saturday,Honda,Urban,Monday,Sep,3,Female,Single,45,Third Party,Sedan - Collision,Sedan,20000 to 29000,0,11900,12,400,2,more than 30,more than 30,2 to 4,7 years,36 to 40,No,No,External,none,no change,1 vehicle,1996,Collision
+Jul,4,Friday,Pontiac,Urban,Tuesday,Sep,2,Male,Married,72,Policy Holder,Sedan - Collision,Sedan,20000 to 29000,0,13174,16,400,1,more than 30,more than 30,more than 4,more than 7,over 65,No,No,External,1 to 2,no change,1 vehicle,1996,Collision
+Jan,2,Sunday,Pontiac,Urban,Monday,Jan,2,Male,Single,39,Policy Holder,Sedan - Liability,Sport,20000 to 29000,0,12073,9,400,3,more than 30,more than 30,1,7 years,36 to 40,No,No,External,1 to 2,no change,1 vehicle,1996,Liability
+Aug,5,Monday,Chevrolet,Rural,Wednesday,Aug,5,Male,Single,48,Policy Holder,Sedan - All Perils,Sedan,more than 69000,0,14318,5,400,2,more than 30,more than 30,none,more than 7,41 to 50,No,No,External,1 to 2,no change,1 vehicle,1996,All Perils
+Aug,1,Saturday,Mazda,Urban,Tuesday,Aug,2,Male,Married,40,Policy Holder,Sedan - Collision,Sedan,20000 to 29000,0,6870,4,400,3,more than 30,more than 30,2 to 4,7 years,36 to 40,No,No,External,more than 5,no change,1 vehicle,1995,Collision
+Sep,2,Tuesday,Pontiac,Urban,Monday,Sep,3,Male,Married,64,Policy Holder,Sedan - All Perils,Sedan,less than 20000,0,9184,6,400,4,8 to 15,more than 30,none,7 years,51 to 65,No,No,External,1 to 2,no change,1 vehicle,1995,All Perils
+Sep,4,Tuesday,Toyota,Urban,Monday,Oct,1,Male,Married,52,Third Party,Sedan - All Perils,Sedan,20000 to 29000,0,9684,9,400,1,more than 30,more than 30,none,7 years,41 to 50,No,No,External,more than 5,no change,1 vehicle,1995,All Perils
+Jun,3,Wednesday,Mazda,Urban,Monday,Jun,4,Male,Married,40,Third Party,Sedan - Collision,Sedan,30000 to 39000,0,5883,7,400,2,more than 30,more than 30,1,more than 7,36 to 40,No,No,External,more than 5,no change,1 vehicle,1994,Collision
+May,3,Wednesday,Dodge,Urban,Wednesday,May,3,Male,Single,26,Policy Holder,Sedan - Liability,Sport,40000 to 59000,0,13069,13,400,4,more than 30,more than 30,1,5 years,31 to 35,No,No,External,none,no change,1 vehicle,1996,Liability
+Jul,1,Saturday,Pontiac,Urban,Wednesday,Jul,2,Male,Single,36,Policy Holder,Sedan - All Perils,Sedan,30000 to 39000,0,1772,5,400,2,more than 30,more than 30,more than 4,7 years,36 to 40,No,No,External,3 to 5,no change,1 vehicle,1994,All Perils
+May,3,Tuesday,Toyota,Urban,Friday,May,4,Male,Married,63,Policy Holder,Sedan - Collision,Sedan,20000 to 29000,0,9110,2,400,4,more than 30,more than 30,1,more than 7,51 to 65,No,No,External,more than 5,no change,1 vehicle,1995,Collision
+Jan,5,Friday,Pontiac,Rural,Tuesday,Feb,1,Female,Married,52,Third Party,Sedan - All Perils,Sedan,20000 to 29000,0,7111,9,400,4,more than 30,more than 30,none,7 years,41 to 50,No,No,External,none,no change,1 vehicle,1995,All Perils
+Apr,3,Sunday,Nisson,Urban,Thursday,Apr,5,Male,Married,29,Policy Holder,Sedan - Collision,Sedan,30000 to 39000,0,8060,14,400,1,more than 30,more than 30,1,7 years,31 to 35,No,No,External,more than 5,no change,1 vehicle,1995,Collision
+Jul,2,Wednesday,Toyota,Urban,Wednesday,Jul,2,Male,Married,32,Policy Holder,Sedan - Collision,Sedan,20000 to 29000,0,5687,13,400,4,more than 30,more than 30,2 to 4,7 years,31 to 35,No,No,External,none,no change,1 vehicle,1994,Collision
+Sep,2,Tuesday,Pontiac,Urban,Friday,Sep,3,Female,Single,24,Policy Holder,Sedan - Collision,Sedan,20000 to 29000,0,9778,7,400,2,more than 30,more than 30,2 to 4,5 years,26 to 30,No,No,External,1 to 2,no change,1 vehicle,1995,Collision
+Feb,2,Thursday,Mazda,Urban,Wednesday,Mar,1,Male,Divorced,42,Policy Holder,Sedan - All Perils,Sedan,30000 to 39000,0,15361,5,400,2,more than 30,more than 30,2 to 4,5 years,36 to 40,No,No,External,none,no change,1 vehicle,1996,All Perils
+Jan,5,Monday,Toyota,Urban,Wednesday,Feb,2,Male,Married,46,Policy Holder,Sedan - Liability,Sport,20000 to 29000,0,6523,15,400,2,more than 30,more than 30,1,7 years,41 to 50,No,No,External,1 to 2,no change,1 vehicle,1995,Liability
+Jan,2,Friday,Toyota,Urban,Friday,Jan,2,Male,Married,60,Third Party,Sedan - Collision,Sedan,20000 to 29000,0,12035,13,400,4,more than 30,more than 30,none,5 years,51 to 65,No,No,External,none,no change,1 vehicle,1996,Collision
+Aug,4,Sunday,Chevrolet,Urban,Monday,Aug,5,Male,Married,46,Policy Holder,Sedan - Liability,Sport,30000 to 39000,0,11379,6,400,3,more than 30,more than 30,more than 4,more than 7,41 to 50,No,No,External,more than 5,no change,1 vehicle,1996,Liability
+Apr,1,Sunday,Accura,Urban,Tuesday,Apr,1,Male,Married,37,Policy Holder,Sedan - Collision,Sedan,30000 to 39000,0,12421,4,400,2,more than 30,more than 30,none,more than 7,36 to 40,No,No,External,more than 5,no change,1 vehicle,1996,Collision
+Sep,2,Thursday,Pontiac,Urban,Thursday,Sep,2,Female,Single,19,Policy Holder,Sedan - Collision,Sedan,20000 to 29000,0,13223,9,400,4,more than 30,more than 30,none,2 years,21 to 25,No,No,External,more than 5,no change,1 vehicle,1996,Collision
+Dec,2,Friday,Honda,Urban,Thursday,Dec,3,Male,Single,25,Policy Holder,Sedan - Liability,Sport,20000 to 29000,0,5912,16,400,3,more than 30,more than 30,1,5 years,26 to 30,No,No,External,none,no change,1 vehicle,1994,Liability
+Dec,2,Monday,Pontiac,Urban,Tuesday,Dec,2,Male,Married,31,Policy Holder,Sedan - Liability,Sport,20000 to 29000,0,10049,15,400,4,more than 30,more than 30,none,7 years,31 to 35,No,No,External,more than 5,no change,1 vehicle,1995,Liability
+Apr,1,Tuesday,Mazda,Urban,Tuesday,May,1,Male,Single,35,Third Party,Sport - Collision,Sport,more than 69000,0,7567,1,400,4,more than 30,more than 30,1,6 years,31 to 35,No,No,External,more than 5,no change,1 vehicle,1995,Collision
+Dec,2,Tuesday,Mazda,Urban,Tuesday,Dec,2,Female,Single,32,Policy Holder,Sedan - Liability,Sport,30000 to 39000,0,2972,6,400,2,more than 30,more than 30,2 to 4,7 years,31 to 35,No,No,External,none,no change,1 vehicle,1994,Liability
+May,3,Thursday,VW,Rural,Wednesday,May,4,Male,Married,42,Policy Holder,Sedan - All Perils,Sedan,40000 to 59000,0,13648,16,400,4,more than 30,more than 30,2 to 4,6 years,36 to 40,No,No,External,3 to 5,no change,1 vehicle,1996,All Perils
+Jul,1,Saturday,Honda,Urban,Tuesday,Aug,2,Male,Married,45,Policy Holder,Sedan - Liability,Sport,20000 to 29000,0,11819,6,400,3,more than 30,more than 30,2 to 4,7 years,36 to 40,No,No,External,none,no change,1 vehicle,1996,Liability
+Nov,4,Saturday,Chevrolet,Urban,Friday,Dec,1,Female,Married,30,Policy Holder,Sedan - Liability,Sport,30000 to 39000,0,6037,7,400,4,more than 30,more than 30,2 to 4,6 years,31 to 35,No,No,External,1 to 2,no change,1 vehicle,1994,Liability
+Feb,4,Tuesday,Pontiac,Urban,Wednesday,Feb,4,Male,Married,38,Policy Holder,Sedan - Liability,Sport,30000 to 39000,0,12236,15,400,4,more than 30,more than 30,none,more than 7,36 to 40,No,No,External,more than 5,no change,1 vehicle,1996,Liability
+Sep,2,Tuesday,Pontiac,Urban,Friday,Sep,4,Male,Married,51,Policy Holder,Sedan - Liability,Sport,20000 to 29000,0,13225,5,400,3,more than 30,more than 30,more than 4,6 years,41 to 50,No,No,External,1 to 2,no change,1 vehicle,1996,Liability
+Jan,1,Monday,Chevrolet,Urban,Monday,Jan,2,Male,Married,33,Third Party,Sedan - Collision,Sedan,30000 to 39000,0,8452,1,400,1,more than 30,more than 30,2 to 4,6 years,31 to 35,No,No,External,1 to 2,no change,1 vehicle,1995,Collision
+Apr,1,Wednesday,Toyota,Urban,Thursday,Apr,2,Male,Married,38,Third Party,Sedan - All Perils,Sedan,20000 to 29000,0,12420,1,400,3,more than 30,more than 30,none,7 years,36 to 40,No,No,External,3 to 5,no change,1 vehicle,1996,All Perils
+Aug,1,Wednesday,Mazda,Urban,Thursday,Aug,1,Male,Married,31,Third Party,Sedan - All Perils,Sedan,20000 to 29000,0,7720,13,700,2,more than 30,more than 30,none,7 years,31 to 35,No,No,External,none,no change,1 vehicle,1995,All Perils
+Jul,4,Wednesday,Dodge,Rural,Thursday,Jul,5,Female,Single,21,Third Party,Sedan - Collision,Sedan,20000 to 29000,0,6588,3,400,1,more than 30,more than 30,1,4 years,26 to 30,No,No,External,more than 5,no change,1 vehicle,1995,Collision
+Nov,1,Monday,Mazda,Urban,Wednesday,Dec,2,Male,Married,45,Policy Holder,Sedan - All Perils,Sedan,20000 to 29000,0,1234,3,400,2,more than 30,more than 30,none,7 years,36 to 40,No,No,External,none,no change,1 vehicle,1994,All Perils
+Oct,2,Saturday,Pontiac,Urban,Friday,Oct,3,Male,Married,38,Policy Holder,Sedan - All Perils,Sedan,20000 to 29000,0,9152,8,400,4,more than 30,more than 30,none,more than 7,36 to 40,No,No,External,1 to 2,no change,1 vehicle,1995,All Perils
+Jan,1,Wednesday,Toyota,Urban,Wednesday,Feb,2,Female,Single,24,Third Party,Sedan - Collision,Sedan,20000 to 29000,0,5059,6,400,2,more than 30,more than 30,2 to 4,4 years,26 to 30,No,No,External,none,no change,1 vehicle,1994,Collision
+Aug,1,Saturday,Mazda,Urban,Tuesday,Sep,2,Female,Married,57,Third Party,Sedan - All Perils,Sedan,20000 to 29000,0,13914,11,400,1,more than 30,more than 30,1,more than 7,51 to 65,No,No,External,1 to 2,no change,1 vehicle,1996,All Perils
+Apr,2,Saturday,Toyota,Urban,Thursday,Apr,3,Male,Single,41,Policy Holder,Sedan - Liability,Sport,more than 69000,0,763,10,400,2,more than 30,more than 30,more than 4,more than 7,36 to 40,No,No,External,more than 5,no change,1 vehicle,1994,Liability
+Feb,4,Friday,Accura,Urban,Friday,Feb,4,Male,Married,29,Policy Holder,Sedan - Collision,Sedan,more than 69000,0,775,10,400,2,more than 30,more than 30,more than 4,7 years,31 to 35,No,No,External,more than 5,no change,1 vehicle,1994,Collision
+Nov,5,Tuesday,Pontiac,Urban,Friday,Dec,3,Male,Married,54,Policy Holder,Sedan - Collision,Sedan,20000 to 29000,0,11333,5,400,4,more than 30,more than 30,none,more than 7,41 to 50,No,No,External,1 to 2,no change,1 vehicle,1995,Collision
+Apr,5,Saturday,Mazda,Urban,Monday,May,1,Male,Married,41,Third Party,Sedan - Collision,Sedan,20000 to 29000,0,7603,1,400,1,more than 30,more than 30,none,7 years,36 to 40,No,No,External,1 to 2,4 to 8 years,2 vehicles,1995,Collision
+Jan,4,Saturday,Mazda,Urban,Wednesday,Jan,4,Male,Single,32,Policy Holder,Sedan - Collision,Sedan,20000 to 29000,0,13672,3,400,4,more than 30,more than 30,2 to 4,6 years,31 to 35,No,No,External,3 to 5,4 to 8 years,2 vehicles,1996,Collision
+Apr,3,Friday,Honda,Urban,Wednesday,Apr,3,Male,Married,28,Third Party,Sedan - Collision,Sedan,30000 to 39000,0,4937,1,400,1,more than 30,more than 30,none,6 years,31 to 35,No,No,External,none,no change,1 vehicle,1994,Collision
+Apr,2,Friday,Mazda,Urban,Monday,Apr,2,Female,Single,28,Policy Holder,Sedan - Collision,Sedan,30000 to 39000,0,11469,3,400,2,more than 30,more than 30,2 to 4,6 years,31 to 35,No,No,External,more than 5,no change,1 vehicle,1996,Collision
+Apr,2,Tuesday,Toyota,Urban,Monday,May,3,Male,Married,57,Policy Holder,Sedan - Collision,Sedan,20000 to 29000,0,3172,1,400,4,more than 30,more than 30,1,more than 7,51 to 65,Yes,No,External,3 to 5,4 to 8 years,2 vehicles,1994,Collision
+Mar,3,Saturday,Honda,Urban,Wednesday,Jan,2,Male,Single,0,Policy Holder,Sedan - All Perils,Sedan,more than 69000,0,283,10,400,2,more than 30,more than 30,none,new,16 to 17,No,No,External,none,no change,1 vehicle,1994,All Perils
+Oct,2,Monday,Accura,Urban,Friday,Oct,4,Male,Married,28,Policy Holder,Utility - All Perils,Utility,more than 69000,0,10253,11,400,4,more than 30,more than 30,1,6 years,31 to 35,Yes,No,External,none,no change,1 vehicle,1995,All Perils

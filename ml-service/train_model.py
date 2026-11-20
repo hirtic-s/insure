@@ -1,177 +1,121 @@
 """
-train_model.py — Train an XGBoost fraud-detection classifier and persist
-the model, encoder, and SHAP explainer so they can be loaded by the
-FastAPI service without retraining.
+train_model.py — Train the XGBoost fraud-risk model on fraud_oracle.csv and
+persist the model, encoder, SHAP explainer and metadata for app.py.
 
-Preprocessing choices are explained inline.
+Metrics come from 5-fold cross-validation (out-of-fold predictions), not a
+single split, because only ~6% of claims are fraud (about 925 positives).
 """
 
-import os
 import json
+import os
+
+import joblib
 import numpy as np
 import pandas as pd
-import joblib
 import shap
-from sklearn.model_selection import train_test_split
+from sklearn.metrics import average_precision_score, roc_auc_score
+from sklearn.model_selection import StratifiedKFold, cross_val_predict
 from sklearn.preprocessing import OneHotEncoder
-from sklearn.metrics import classification_report, roc_auc_score
 from xgboost import XGBClassifier
 
-# ── paths ────────────────────────────────────────────────────────────────
-DATA_PATH = os.path.join(os.path.dirname(__file__), "data", "insurance_fraud_data.csv")
-MODEL_DIR = os.path.join(os.path.dirname(__file__), "model")
+HERE = os.path.dirname(__file__)
+DATA_PATH = os.path.join(HERE, "data", "fraud_oracle.csv")
+MODEL_DIR = os.path.join(HERE, "model")
 os.makedirs(MODEL_DIR, exist_ok=True)
 
-# ── 1. load ──────────────────────────────────────────────────────────────
-df = pd.read_csv(DATA_PATH)
-print(f"Loaded {len(df)} rows, {df.shape[1]} columns")
+TARGET = "FraudFound_P"
 
-# ── 2. drop claim_date ──────────────────────────────────────────────────
-# Raw date strings aren't directly useful as a feature. The dataset already
-# provides claim_day_of_week, which captures the weekday signal (e.g.
-# claims filed on weekends may correlate with fraud). Dropping avoids
-# leaking exact-date information and keeps the feature set simple.
-# ── drop features that cause data leakage ────────────────────────────
-# "days open" and "form defects" are only known AFTER a claim is submitted
-# and under review — they wouldn't exist at scoring time for a new claim.
-# Training on them creates a model that can't be used in production.
-#
-# "liab_prct" (liability percentage) is determined by a claims adjuster
-# during investigation, not reported by the claimant at filing time.
-# Including it would also be leakage.
-#
-# "claim_date" is a raw date string; claim_day_of_week already captures
-# the weekday signal.
-LEAK_COLS = ["claim_date", "days open", "form defects", "liab_prct"]
-df = df.drop(columns=LEAK_COLS)
+# Columns excluded from training, and why.
+#   PolicyNumber, RepNumber : row identifiers; they only encode where a row sits
+#                             in the file, not anything about the claim.
+#   Year                    : 1994-1996 only; a dataset-assembly artefact. With
+#                             it, CV AUC reads ~0.85 but the signal is spurious.
+#   NumberOfSuppliments     : supplements are added after a claim is filed, so
+#                             it is not known at scoring time (dropping it did
+#                             not change AUC).
+DROP_COLS = ["PolicyNumber", "RepNumber", "Year", "NumberOfSuppliments"]
 
-# ── 3. clean sentinel values ────────────────────────────────────────────
-# Several columns use "*" as a missing/unknown sentinel.  Replace with NaN
-# so pandas can coerce types properly.
-df = df.replace("*", np.nan)
+NUMERIC_COLS = ["WeekOfMonth", "WeekOfMonthClaimed", "Age", "Deductible", "DriverRating"]
 
-# ── 4. separate target ──────────────────────────────────────────────────
-TARGET = "fraud reported"
-y = df[TARGET]
-X = df.drop(columns=[TARGET])
+df = pd.read_csv(DATA_PATH, encoding="utf-8-sig")
+print(f"Loaded {len(df)} rows, fraud rate {df[TARGET].mean():.3%}")
 
-# Drop any rows with NaN target
-mask = y.notna()
-X, y = X[mask], y[mask].astype(int)
+y = df[TARGET].astype(int)
+X = df.drop(columns=[TARGET] + DROP_COLS)
+CATEGORICAL_COLS = [c for c in X.columns if c not in NUMERIC_COLS]
 
-# ── 5. one-hot encode categoricals ──────────────────────────────────────
-# Why one-hot instead of label encoding?  XGBoost *can* handle integer-
-# encoded categoricals, but one-hot is safer for nominal features with no
-# ordinal relationship (e.g. vehicle_color, accident_site).  With only
-# ~20 total categories across 8 columns the dimensionality stays low.
-CATEGORICAL_COLS = [
-    "gender", "marital_status", "property_status", "accident_site",
-    "claim_day_of_week", "channel", "vehicle_category", "vehicle_color",
-]
-
-# Identify which columns in X are numeric (everything not in CATEGORICAL_COLS)
-NUMERIC_COLS = [c for c in X.columns if c not in CATEGORICAL_COLS]
-
-# Coerce numeric columns (some were read as object due to "*" sentinels)
-for col in NUMERIC_COLS:
-    X[col] = pd.to_numeric(X[col], errors="coerce")
-
-# Fill remaining NaN in numeric columns with the median — a robust choice
-# that doesn't shift the distribution the way mean-imputation can.
-numeric_medians = X[NUMERIC_COLS].median()
-X[NUMERIC_COLS] = X[NUMERIC_COLS].fillna(numeric_medians)
-
-# Fill NaN in categoricals with "Unknown" so OneHotEncoder gets a clean category
-for col in CATEGORICAL_COLS:
-    X[col] = X[col].fillna("Unknown")
-
+# Every categorical value is already a string bucket (e.g. "more than 69000",
+# "2 to 4"), so one-hot encode them; unseen values at scoring time map to zeros.
 encoder = OneHotEncoder(sparse_output=False, handle_unknown="ignore")
 encoded = encoder.fit_transform(X[CATEGORICAL_COLS])
-encoded_feature_names = list(encoder.get_feature_names_out(CATEGORICAL_COLS))
-
-# Recombine: numeric columns + one-hot columns
-X_numeric = X[NUMERIC_COLS].values
-X_processed = np.hstack([X_numeric, encoded])
-all_feature_names = NUMERIC_COLS + encoded_feature_names
-
+all_feature_names = NUMERIC_COLS + list(encoder.get_feature_names_out(CATEGORICAL_COLS))
+X_processed = np.hstack([X[NUMERIC_COLS].to_numpy(dtype=float), encoded])
 print(f"Features after encoding: {len(all_feature_names)}")
 
-# ── 5. train/test split ─────────────────────────────────────────────────
-# Stratified so both sets preserve the ~25/75 fraud ratio — important
-# because a naive random split on an imbalanced dataset could give a test
-# set with very few fraud cases, making evaluation noisy.
-X_train, X_test, y_train, y_test = train_test_split(
-    X_processed, y,
-    test_size=0.2,
-    random_state=42,
-    stratify=y,
-)
-print(f"Train: {len(X_train)}, Test: {len(X_test)}")
-
-# ── 6. train XGBoost ────────────────────────────────────────────────────
-# scale_pos_weight compensates for class imbalance: it tells XGBoost to
-# weight positive (fraud) samples more heavily.  The ratio is
-# (# negatives / # positives) ≈ 75/25 = 3.0.  Without this, the model
-# would be biased toward predicting "not fraud" simply because that class
-# dominates.
-neg_count = int((y_train == 0).sum())
-pos_count = int((y_train == 1).sum())
-scale_pos_weight = neg_count / pos_count
-print(f"scale_pos_weight = {scale_pos_weight:.2f}  ({neg_count} neg / {pos_count} pos)")
-
+# No scale_pos_weight: unweighted logloss keeps scores close to real
+# probabilities, so "18%" means roughly that, against a ~6% base rate.
 model = XGBClassifier(
-    n_estimators=200,
-    max_depth=5,
-    learning_rate=0.1,
-    scale_pos_weight=scale_pos_weight,
+    n_estimators=300,
+    max_depth=4,
+    learning_rate=0.05,
+    subsample=0.8,
+    colsample_bytree=0.8,
+    min_child_weight=3,
     eval_metric="logloss",
     random_state=42,
-
+    n_jobs=4,
 )
-model.fit(X_train, y_train)
 
-# ── 7. evaluate ──────────────────────────────────────────────────────────
-y_pred = model.predict(X_test)
-y_prob = model.predict_proba(X_test)[:, 1]
+cv = StratifiedKFold(n_splits=5, shuffle=True, random_state=0)
+oof = cross_val_predict(model, X_processed, y, cv=cv, method="predict_proba")[:, 1]
 
-print("\n=== Classification Report ===")
-print(classification_report(y_test, y_pred, target_names=["Not Fraud", "Fraud"]))
+roc_auc = roc_auc_score(y, oof)
+pr_auc = average_precision_score(y, oof)
 
-roc_auc = roc_auc_score(y_test, y_prob)
-print(f"ROC-AUC: {roc_auc:.4f}\n")
+# Risk bands from the out-of-fold score distribution: High = top 10% of claims,
+# Medium = next 20%. Reviewers open the queue from the top, so this is about
+# where review time goes, not about a fraud probability cut-off.
+high_min = float(np.quantile(oof, 0.90))
+medium_min = float(np.quantile(oof, 0.70))
+top10 = oof >= high_min
+top30 = oof >= medium_min
+metrics = {
+    "rows": int(len(df)),
+    "fraud_rate": round(float(y.mean()), 4),
+    "cv_roc_auc": round(float(roc_auc), 4),
+    "cv_pr_auc": round(float(pr_auc), 4),
+    "top10_precision": round(float(y[top10].mean()), 4),
+    "top10_share_of_fraud_caught": round(float(y[top10].sum() / y.sum()), 4),
+    "top30_share_of_fraud_caught": round(float(y[top30].sum() / y.sum()), 4),
+    "high_min": round(high_min, 4),
+    "medium_min": round(medium_min, 4),
+}
+print(json.dumps(metrics, indent=2))
 
-# ── 8. SHAP feature importances ─────────────────────────────────────────
-# TreeExplainer is optimised for tree-based models and gives exact Shapley
-# values.  We compute on the full test set to get stable global importance.
+model.fit(X_processed, y)
+
 explainer = shap.TreeExplainer(model)
-shap_values = explainer.shap_values(X_test)
-
-# Global importance = mean |SHAP value| per feature
-mean_abs_shap = np.abs(shap_values).mean(axis=0)
-importance_df = (
+sample = X_processed[np.random.RandomState(0).choice(len(y), 2000, replace=False)]
+mean_abs_shap = np.abs(explainer.shap_values(sample)).mean(axis=0)
+(
     pd.DataFrame({"feature": all_feature_names, "mean_abs_shap": mean_abs_shap})
     .sort_values("mean_abs_shap", ascending=False)
+    .to_csv(os.path.join(MODEL_DIR, "feature_importances.csv"), index=False)
 )
 
-print("=== Top 15 Global Feature Importances (mean |SHAP|) ===")
-print(importance_df.head(15).to_string(index=False))
-
-# Save importance summary
-importance_df.to_csv(os.path.join(MODEL_DIR, "feature_importances.csv"), index=False)
-
-# ── 9. persist artefacts ─────────────────────────────────────────────────
 joblib.dump(model, os.path.join(MODEL_DIR, "xgb_model.joblib"))
 joblib.dump(encoder, os.path.join(MODEL_DIR, "onehot_encoder.joblib"))
 joblib.dump(explainer, os.path.join(MODEL_DIR, "shap_explainer.joblib"))
-
-# Save column metadata so the API knows the exact feature order
-metadata = {
-    "numeric_cols": NUMERIC_COLS,
-    "categorical_cols": CATEGORICAL_COLS,
-    "all_feature_names": all_feature_names,
-    "numeric_medians": numeric_medians.to_dict(),
-}
 with open(os.path.join(MODEL_DIR, "column_metadata.json"), "w") as f:
-    json.dump(metadata, f, indent=2)
-
-print(f"\nArtefacts saved to {MODEL_DIR}/")
+    json.dump(
+        {
+            "numeric_cols": NUMERIC_COLS,
+            "categorical_cols": CATEGORICAL_COLS,
+            "all_feature_names": all_feature_names,
+            "category_values": {c: list(map(str, v)) for c, v in zip(CATEGORICAL_COLS, encoder.categories_)},
+            "metrics": metrics,
+        },
+        f,
+        indent=2,
+    )
+print(f"Artefacts saved to {MODEL_DIR}/")

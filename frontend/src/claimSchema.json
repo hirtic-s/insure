@@ -1,0 +1,404 @@
+{
+ "groups": [
+  {
+   "title": "Driver",
+   "fields": [
+    "Age",
+    "Sex",
+    "MaritalStatus",
+    "AgeOfPolicyHolder",
+    "DriverRating"
+   ]
+  },
+  {
+   "title": "Vehicle",
+   "fields": [
+    "Make",
+    "VehicleCategory",
+    "VehiclePrice",
+    "AgeOfVehicle"
+   ]
+  },
+  {
+   "title": "Policy",
+   "fields": [
+    "PolicyType",
+    "BasePolicy",
+    "Deductible",
+    "NumberOfCars",
+    "AgentType",
+    "PastNumberOfClaims",
+    "AddressChange_Claim",
+    "Days_Policy_Accident",
+    "Days_Policy_Claim"
+   ]
+  },
+  {
+   "title": "Accident and claim",
+   "fields": [
+    "Fault",
+    "AccidentArea",
+    "Month",
+    "WeekOfMonth",
+    "DayOfWeek",
+    "MonthClaimed",
+    "WeekOfMonthClaimed",
+    "DayOfWeekClaimed",
+    "PoliceReportFiled",
+    "WitnessPresent"
+   ]
+  }
+ ],
+ "fields": {
+  "WeekOfMonth": {
+   "label": "Accident week of month",
+   "type": "select",
+   "options": [
+    "1",
+    "2",
+    "3",
+    "4",
+    "5"
+   ],
+   "default": "3"
+  },
+  "WeekOfMonthClaimed": {
+   "label": "Claim filed week of month",
+   "type": "select",
+   "options": [
+    "1",
+    "2",
+    "3",
+    "4",
+    "5"
+   ],
+   "default": "2"
+  },
+  "Age": {
+   "label": "Driver age",
+   "type": "number",
+   "min": 16,
+   "max": 100,
+   "default": 39
+  },
+  "Deductible": {
+   "label": "Deductible",
+   "type": "select",
+   "options": [
+    "300",
+    "400",
+    "500",
+    "700"
+   ],
+   "default": "400"
+  },
+  "DriverRating": {
+   "label": "Driver rating",
+   "type": "select",
+   "options": [
+    "1",
+    "2",
+    "3",
+    "4"
+   ],
+   "default": "1"
+  },
+  "Month": {
+   "label": "Accident month",
+   "type": "select",
+   "options": [
+    "Jan",
+    "Feb",
+    "Mar",
+    "Apr",
+    "May",
+    "Jun",
+    "Jul",
+    "Aug",
+    "Sep",
+    "Oct",
+    "Nov",
+    "Dec"
+   ],
+   "default": "Jan"
+  },
+  "DayOfWeek": {
+   "label": "Accident day",
+   "type": "select",
+   "options": [
+    "Monday",
+    "Tuesday",
+    "Wednesday",
+    "Thursday",
+    "Friday",
+    "Saturday",
+    "Sunday"
+   ],
+   "default": "Monday"
+  },
+  "Make": {
+   "label": "Vehicle make",
+   "type": "select",
+   "options": [
+    "Accura",
+    "BMW",
+    "Chevrolet",
+    "Dodge",
+    "Ferrari",
+    "Ford",
+    "Honda",
+    "Jaguar",
+    "Lexus",
+    "Mazda",
+    "Mecedes",
+    "Mercury",
+    "Nisson",
+    "Pontiac",
+    "Porche",
+    "Saab",
+    "Saturn",
+    "Toyota",
+    "VW"
+   ],
+   "default": "Pontiac"
+  },
+  "AccidentArea": {
+   "label": "Accident area",
+   "type": "select",
+   "options": [
+    "Rural",
+    "Urban"
+   ],
+   "default": "Urban"
+  },
+  "DayOfWeekClaimed": {
+   "label": "Claim filed on",
+   "type": "select",
+   "options": [
+    "0",
+    "Monday",
+    "Tuesday",
+    "Wednesday",
+    "Thursday",
+    "Friday",
+    "Saturday",
+    "Sunday"
+   ],
+   "default": "Monday"
+  },
+  "MonthClaimed": {
+   "label": "Claim filed in",
+   "type": "select",
+   "options": [
+    "0",
+    "Jan",
+    "Feb",
+    "Mar",
+    "Apr",
+    "May",
+    "Jun",
+    "Jul",
+    "Aug",
+    "Sep",
+    "Oct",
+    "Nov",
+    "Dec"
+   ],
+   "default": "Jan"
+  },
+  "Sex": {
+   "label": "Driver sex",
+   "type": "select",
+   "options": [
+    "Female",
+    "Male"
+   ],
+   "default": "Male"
+  },
+  "MaritalStatus": {
+   "label": "Marital status",
+   "type": "select",
+   "options": [
+    "Divorced",
+    "Married",
+    "Single",
+    "Widow"
+   ],
+   "default": "Married"
+  },
+  "Fault": {
+   "label": "At fault",
+   "type": "select",
+   "options": [
+    "Policy Holder",
+    "Third Party"
+   ],
+   "default": "Policy Holder"
+  },
+  "PolicyType": {
+   "label": "Policy type",
+   "type": "select",
+   "options": [
+    "Sedan - All Perils",
+    "Sedan - Collision",
+    "Sedan - Liability",
+    "Sport - All Perils",
+    "Sport - Collision",
+    "Sport - Liability",
+    "Utility - All Perils",
+    "Utility - Collision",
+    "Utility - Liability"
+   ],
+   "default": "Sedan - Collision"
+  },
+  "VehicleCategory": {
+   "label": "Vehicle category",
+   "type": "select",
+   "options": [
+    "Sedan",
+    "Sport",
+    "Utility"
+   ],
+   "default": "Sedan"
+  },
+  "VehiclePrice": {
+   "label": "Vehicle price",
+   "type": "select",
+   "options": [
+    "20000 to 29000",
+    "30000 to 39000",
+    "40000 to 59000",
+    "60000 to 69000",
+    "less than 20000",
+    "more than 69000"
+   ],
+   "default": "20000 to 29000"
+  },
+  "Days_Policy_Accident": {
+   "label": "Days from policy start to accident",
+   "type": "select",
+   "options": [
+    "1 to 7",
+    "15 to 30",
+    "8 to 15",
+    "more than 30",
+    "none"
+   ],
+   "default": "more than 30"
+  },
+  "Days_Policy_Claim": {
+   "label": "Days from policy start to claim",
+   "type": "select",
+   "options": [
+    "15 to 30",
+    "8 to 15",
+    "more than 30",
+    "none"
+   ],
+   "default": "more than 30"
+  },
+  "PastNumberOfClaims": {
+   "label": "Past claims",
+   "type": "select",
+   "options": [
+    "1",
+    "2 to 4",
+    "more than 4",
+    "none"
+   ],
+   "default": "2 to 4"
+  },
+  "AgeOfVehicle": {
+   "label": "Vehicle age",
+   "type": "select",
+   "options": [
+    "2 years",
+    "3 years",
+    "4 years",
+    "5 years",
+    "6 years",
+    "7 years",
+    "more than 7",
+    "new"
+   ],
+   "default": "7 years"
+  },
+  "AgeOfPolicyHolder": {
+   "label": "Policyholder age",
+   "type": "select",
+   "options": [
+    "16 to 17",
+    "18 to 20",
+    "21 to 25",
+    "26 to 30",
+    "31 to 35",
+    "36 to 40",
+    "41 to 50",
+    "51 to 65",
+    "over 65"
+   ],
+   "default": "31 to 35"
+  },
+  "PoliceReportFiled": {
+   "label": "Police report filed",
+   "type": "select",
+   "options": [
+    "No",
+    "Yes"
+   ],
+   "default": "No"
+  },
+  "WitnessPresent": {
+   "label": "Witness present",
+   "type": "select",
+   "options": [
+    "No",
+    "Yes"
+   ],
+   "default": "No"
+  },
+  "AgentType": {
+   "label": "Agent type",
+   "type": "select",
+   "options": [
+    "External",
+    "Internal"
+   ],
+   "default": "External"
+  },
+  "AddressChange_Claim": {
+   "label": "Address change before claim",
+   "type": "select",
+   "options": [
+    "1 year",
+    "2 to 3 years",
+    "4 to 8 years",
+    "no change",
+    "under 6 months"
+   ],
+   "default": "no change"
+  },
+  "NumberOfCars": {
+   "label": "Cars on policy",
+   "type": "select",
+   "options": [
+    "1 vehicle",
+    "2 vehicles",
+    "3 to 4",
+    "5 to 8",
+    "more than 8"
+   ],
+   "default": "1 vehicle"
+  },
+  "BasePolicy": {
+   "label": "Base policy",
+   "type": "select",
+   "options": [
+    "All Perils",
+    "Collision",
+    "Liability"
+   ],
+   "default": "Collision"
+  }
+ }
+}

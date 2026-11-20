@@ -19,6 +19,9 @@ public class ClaimRiskScore {
     @Column(nullable = false)
     private double riskScore;
 
+    /** HIGH / MEDIUM / LOW, assigned by the ML service from its score distribution. */
+    private String riskBand;
+
     @Column(length = 1000)
     private String topFactors;
 
@@ -51,6 +54,14 @@ public class ClaimRiskScore {
 
     public void setRiskScore(double riskScore) {
         this.riskScore = riskScore;
+    }
+
+    public String getRiskBand() {
+        return riskBand;
+    }
+
+    public void setRiskBand(String riskBand) {
+        this.riskBand = riskBand;
     }
 
     public String getTopFactors() {
