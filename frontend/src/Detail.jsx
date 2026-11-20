@@ -1,3 +1,4 @@
+import Briefing from "./Briefing.jsx";
 import { ArrowDownIcon, ArrowUpIcon, BackIcon } from "./icons.jsx";
 import { BAND_LABEL, band, duration, factorParts, pct, redFlags } from "./format.js";
 
@@ -65,6 +66,8 @@ export default function Detail({ claim, onClose }) {
           <p className="f-note">Read from the claim itself, whatever the score. Several are common in ordinary claims, so they are prompts to look, not signs of fraud.</p>
         </section>
       )}
+
+      <Briefing key={claim.id} claimId={claim.id} />
 
       <section className="block">
         <h3>Claim</h3>

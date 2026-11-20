@@ -5,9 +5,11 @@ import com.example.insurance.dto.ClaimView;
 import com.example.insurance.dto.ScorePoint;
 import com.example.insurance.entity.Claim;
 import com.example.insurance.repository.ClaimRepository;
+import com.example.insurance.service.BriefingService;
 import com.example.insurance.service.ClaimService;
 import jakarta.validation.Valid;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.core.ParameterizedTypeReference;
 import org.springframework.data.domain.PageRequest;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -20,6 +22,8 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.client.HttpStatusCodeException;
+import org.springframework.web.client.ResourceAccessException;
 
 import java.util.List;
 import java.util.Map;
@@ -34,11 +38,13 @@ public class ClaimController {
 
     private final ClaimService claimService;
     private final ClaimRepository claimRepository;
+    private final BriefingService briefingService;
 
     @Autowired
-    public ClaimController(ClaimService claimService, ClaimRepository claimRepository) {
+    public ClaimController(ClaimService claimService, ClaimRepository claimRepository, BriefingService briefingService) {
         this.claimService = claimService;
         this.claimRepository = claimRepository;
+        this.briefingService = briefingService;
     }
 
     @PostMapping
@@ -85,5 +91,28 @@ public class ClaimController {
         return claimRepository.findViewById(id)
                 .map(ResponseEntity::ok)
                 .orElse(ResponseEntity.notFound().build());
+    }
+
+    /** A cited briefing drafted by the RAG service; cached there per claim, so refresh=true regenerates. */
+    @PostMapping("/{id}/briefing")
+    public ResponseEntity<Map<String, Object>> briefing(@PathVariable UUID id,
+                                                        @RequestParam(defaultValue = "false") boolean refresh) {
+        return briefingService.briefing(id, refresh)
+                .map(ResponseEntity::ok)
+                .orElse(ResponseEntity.notFound().build());
+    }
+
+    /** Passes the RAG service's own message through (rate limit, missing key); unreachable is a 503. */
+    @ExceptionHandler(HttpStatusCodeException.class)
+    public ResponseEntity<Map<String, String>> ragRejected(HttpStatusCodeException e) {
+        Map<String, Object> body = e.getResponseBodyAs(new ParameterizedTypeReference<Map<String, Object>>() {});
+        Object detail = body == null ? null : body.get("detail");
+        return ResponseEntity.status(e.getStatusCode()).body(Map.of("error", detail == null ? "The briefing service returned an error." : detail.toString()));
+    }
+
+    @ExceptionHandler(ResourceAccessException.class)
+    public ResponseEntity<Map<String, String>> ragUnreachable(ResourceAccessException e) {
+        return ResponseEntity.status(HttpStatus.SERVICE_UNAVAILABLE)
+                .body(Map.of("error", "The briefing service is unavailable or timed out. Try again shortly."));
     }
 }

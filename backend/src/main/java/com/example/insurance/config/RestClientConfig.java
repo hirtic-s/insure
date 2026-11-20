@@ -24,6 +24,17 @@ public class RestClientConfig {
                 .build();
     }
 
+    // Gemini takes seconds to write a briefing, so this client waits far longer than the ML one.
+    @Bean
+    public RestClient ragServiceRestClient(
+            @Value("${rag-service.base-url:http://localhost:8001}") String baseUrl,
+            @Value("${rag-service.read-timeout-ms:60000}") long readMs) {
+        return RestClient.builder()
+                .baseUrl(baseUrl)
+                .requestFactory(factory(2000, readMs))
+                .build();
+    }
+
     private static SimpleClientHttpRequestFactory factory(long connectMs, long readMs) {
         SimpleClientHttpRequestFactory f = new SimpleClientHttpRequestFactory();
         f.setConnectTimeout(Duration.ofMillis(connectMs));

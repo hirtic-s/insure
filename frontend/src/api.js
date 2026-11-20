@@ -23,3 +23,6 @@ export function submitManual(claims) {
     body: JSON.stringify({ claims }),
   }).then(json);
 }
+
+export const draftBriefing = (id, refresh = false) =>
+  fetch(`/api/claims/${id}/briefing${refresh ? "?refresh=true" : ""}`, { method: "POST" }).then(json);
